@@ -1,0 +1,135 @@
+<style>
+
+.header img{
+   width:100px;
+}
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #555;
+  color: black;
+}
+
+
+#navbar a.active {
+  background-color: #af4b7d;
+  color: white;
+}
+
+.content {
+  padding: 15px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 50px;
+}
+
+.search-container {
+  float: right;
+  padding: 14px 15px 0px;
+  align-content: center;
+}
+
+.search-container button:hover {
+  background: #ccc;
+   
+.search-container button {
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  background: #ddd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  
+   }
+   
+#navbar input[type=text], .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 20px;
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  #navbar .search-container {
+    float: none;
+  }
+
+
+</style>
+
+<div class="header">
+  <img scr=/images/BRlogo.png alt="BRlogo" />
+  <p>It's time to make impossible into possible</p>
+</div>
+
+<div id="navbar">
+  <a class="active" href="#">Home</a>
+  <a href="/about.html">About Us</a>
+  <a href="/contact.html">Contact Us</a>
+  <a href="http://rvakr.blogspot.com">Blog </a>
+   <div class="search-container">
+    <form action="/">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+
+</body>
+</html>
