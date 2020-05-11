@@ -1,0 +1,84 @@
+
+/*   cascading style sheet for website   */
+/*  ==========   body  ==========   */
+#body{
+    background-color: azure;
+    margin: 0%;
+}
+
+/*  ==========   Header  ==========    */
+#Header{
+    align-self: flex-start;
+    background-color: aqua;
+    display: flex;
+    display: flex;
+          flex-direction: column;
+}
+
+/*  =====   Top_head    =====   */
+.Top_head{
+    float: none;
+    text-align: center;
+    margin: 0px;
+    order: 1;
+    z-index: 1;
+}
+/*  logo    */
+img.logo{
+    height: 100px;
+    margin: 1em auto auto auto;
+    width: 100px;  
+}
+
+/*  =====   Nav_bar   =====   */
+.Nav_bar{
+    background-color: burlywood;  
+    padding: 0.3em 0 0.4em 0;
+    width: 100%;
+    flex-wrap: wrap;
+    order: 2;
+    z-index: 2;
+     
+}
+.Nav_menu{
+    display: inline-block;
+}
+.Nav_button{
+    font-size: 1.5em;
+    margin: 0 1em 0 0.5em;
+    text-decoration: none;
+}
+
+/*  ======  Search_menu ===== */
+.Search_menu{
+    float: right;
+}
+
+/* unvisited link */
+a:link { color: blue; }
+/* visited link */
+a:visited { color: green; }
+/* mouse over link */
+a:hover { color: red; }
+/* selected link */
+a:active { color: yellow; } 
+
+
+
+/*  =====   fix the nav bar untill end =====    */
+.sticky {
+    position: fixed;
+    top: auto;
+    width: 100%;
+    flex-wrap: wrap;
+  }  
+  
+/*      */
+
+/*      */
+
+/*      */
+
+/*      */
+
+/*      */
