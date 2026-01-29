@@ -211,7 +211,7 @@ nav ul {
 /* Grid Layouts */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     width: 100%;
     max-width: var(--container-width);
@@ -367,6 +367,18 @@ nav ul {
     nav ul {
         flex-direction: column;
     }
+
+    .section {
+        padding: 4rem 5%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Project Styles */
@@ -457,7 +469,7 @@ nav ul {
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
 }
 

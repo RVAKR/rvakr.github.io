@@ -22,12 +22,14 @@
     {
         "platform": "YouTube",
         "url": "https://www.youtube.com/@codexlabs",
-        "icon": "fab fa-youtube"
+        "icon": "fab fa-youtube",
+        "label": "YouTube | CodeXLabs"
     },
     {
         "platform": "YouTube",
         "url": "https://www.youtube.com/@codewithbr",
-        "icon": "fab fa-youtube"
+        "icon": "fab fa-youtube",
+        "label": "YouTube | CodeWithBR"
     },
     {
         "platform": "X",
