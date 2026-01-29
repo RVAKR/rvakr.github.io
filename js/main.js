@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getIconHTML(social) {
         const platform = social.platform.toLowerCase();
         // Whitelist of standard FontAwesome icons we know work well
-        const faPlatforms = ['github', 'linkedin', 'twitter', 'x', 'instagram', 'facebook', 'youtube', 'discord'];
+        const faPlatforms = ['github', 'linkedin', 'twitter', 'x', 'instagram', 'facebook', 'youtube', 'discord', 'email'];
 
         if (faPlatforms.includes(platform)) {
             return `<i class="${social.icon}"></i>`;
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const socialLinksHTML = socials.map(social => `
             <a href="${social.url}" target="_blank" class="social-card">
                 ${getIconHTML(social)}
-                <span>${social.platform}</span>
+                <span>${social.label || social.platform}</span>
             </a>
         `).join('');
 

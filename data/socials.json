@@ -20,6 +20,16 @@
         "icon": "fab fa-hackerrank"
     },
     {
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/@codexlabs",
+        "icon": "fab fa-youtube"
+    },
+    {
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/@codewithbr",
+        "icon": "fab fa-youtube"
+    },
+    {
         "platform": "X",
         "url": "https://twitter.com/rvakr",
         "icon": "fab fa-twitter"
@@ -33,5 +43,10 @@
         "platform": "Facebook",
         "url": "https://www.facebook.com/ReddyVeeraAkhilKumarReddy/",
         "icon": "fab fa-facebook"
+    },
+    {
+        "platform": "Email",
+        "url": "mailto:contactmail.br@gmail.com",
+        "icon": "fas fa-envelope"
     }
 ]
