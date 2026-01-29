@@ -1,0 +1,55 @@
+[
+    {
+        "title": "ChoiceBase",
+        "category": "Web Application",
+        "description": "A decision-making framework or tool helping users make better choices.",
+        "techStack": [
+            "Web",
+            "Decision Theory"
+        ],
+        "projectUrl": "https://choicebase.github.io/",
+        "sourceUrl": "https://github.com/choicebase/choicebase.github.io",
+        "isPublic": true,
+        "image": "images/project_choicebase.jpg"
+    },
+    {
+        "title": "My Cheat Sheets",
+        "category": "Documentation",
+        "description": "A comprehensive collection of developer cheat sheets for quick reference.",
+        "techStack": [
+            "Documentation",
+            "Reference"
+        ],
+        "projectUrl": "https://my-cheat-sheets.github.io/",
+        "sourceUrl": "https://github.com/my-cheat-sheets/my-cheat-sheets.github.io",
+        "isPublic": true,
+        "image": "images/project_cheatsheets.jpg"
+    },
+    {
+        "title": "My Home Kitchen",
+        "category": "Web Application",
+        "description": "A catalog-based application for managing home and kitchen inventory.",
+        "techStack": [
+            "Web App",
+            "Utility"
+        ],
+        "projectUrl": "https://myhomekitchen.github.io/",
+        "sourceUrl": "https://github.com/myhomekitchen/myhomekitchen.github.io",
+        "isPublic": true,
+        "image": "images/project_kitchen.jpg"
+    },
+    {
+        "title": "PyConnector",
+        "category": "Python Library",
+        "description": "A Python package for simplified connectivity.",
+        "techStack": [
+            "Python",
+            "PyPI",
+            "Library"
+        ],
+        "projectUrl": "https://pypi.org/project/pyconnector/",
+        "sourceUrl": "https://github.com/rvakr/pyconnector",
+        "isPublic": true,
+        "image": "images/project_pypi.jpg"
+    }
+]

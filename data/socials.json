@@ -1,0 +1,37 @@
+[
+    {
+        "platform": "GitHub",
+        "url": "https://github.com/rvakr",
+        "icon": "fab fa-github"
+    },
+    {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rvakr",
+        "icon": "fab fa-linkedin-in"
+    },
+    {
+        "platform": "Databricks",
+        "url": "https://community.databricks.com/t5/user/viewprofilepage/user-id/119159",
+        "icon": "fab fa-databricks"
+    },
+    {
+        "platform": "HackerRank",
+        "url": "https://www.hackerrank.com/profile/rvakr",
+        "icon": "fab fa-hackerrank"
+    },
+    {
+        "platform": "X",
+        "url": "https://twitter.com/rvakr",
+        "icon": "fab fa-twitter"
+    },
+    {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/rvakr.br/",
+        "icon": "fab fa-instagram"
+    },
+    {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/ReddyVeeraAkhilKumarReddy/",
+        "icon": "fab fa-facebook"
+    }
+]

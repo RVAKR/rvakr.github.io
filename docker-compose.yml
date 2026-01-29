@@ -1,0 +1,12 @@
+
+
+services:
+
+  rvakr:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    container_name: rvakr
+    restart: always

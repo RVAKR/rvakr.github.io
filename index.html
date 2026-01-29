@@ -1,175 +1,67 @@
-<html>
-    <head>
-        <title>HEADER AND FOOTER</title>
-        
-        <link rel="stylesheet" type="text/css" href="Style.css">
-        
-    </head>
-    <body id="body">
-        <div>
-            <section id="Header" >
-                <div class="Top_head">
-                    <img class="logo" src="/br web/Images/BRlogo.png" alt=BRlogo>
-                    <h2>The BR logo</h2>
-                </div>
-                <div id="Nav_bar" class="Nav_bar sticky">
-                    <div class="Nav_menu">
-                        <a class="Nav_button" href="/">Home</a>
-                        <a class="Nav_button" href="/about.html">AboutUs</a>
-                        <a class="Nav_button" href="/aboutus.html">menu</a>
-                        <a class="Nav_button" href="$BlogURL$">Blog</a>
-                        <a class="Nav_button" href="/contact.html">ContactUs</a>
-                    </div>
-                    <div class="Search_menu">
-                        <input type="text" value="search...">
-                        <button class="Search_button">Search..</button>                    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVAKR.B | Future Tech Portfolio</title>
+    <meta name="description" content="R&D Engineer and Open Source Enthusiast Portfolio">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="bg-canvas-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <div class="interface-overlay">
+        <header id="main-header">
+            <div class="logo">RVAKR.B<span class="cursor">_</span></div>
+            <nav>
+                <ul id="nav-list">
+                    <!-- Dynamic Nav Items -->
+                </ul>
+            </nav>
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <main id="app">
+            <!-- Sections will be injected here via JS -->
+            <section id="hero" class="section">
+                <div class="hero-content">
+                    <h1 class="glitch" data-text="LOADING...">LOADING...</h1>
                 </div>
             </section>
-            
+        </main>
 
-            <pre>
-                arbfrrewwtnewyn
-                erwy
-                r
-                vgt
-                arbfrrewwtnewyn
-                erwy
-                r
-                vgt
-                r
-                g
-                rvvg
-                r
-                g
-                r
-                t
-                r
-                t
-                
-                
-                r
-                g
-                th
-                t
-                rn
-                gf
-                n
-                g
-                nh
-                h
-                
-                rh
-                g
-                h
-                h
-                g
-                
-                h
-                
-                h
-                t
-                h
-                yjn
-                h
-        
-                
-                rh
-                g
-                h
-                h
-                g
-                
-                h
-                
-                h
-                t
-                h
-                yjn
-                h
-                
-                th
-                f
-                h
-                rt
-                h
-                te
-                r
-                
-                h
-                t
-                h
-                rht
-                r
-                g
-                rvvg
-                r
-                g
-                r
-                t
-                r
-                t
-                
-                
-                r
-                g
-                th
-                t
-                rn
-                gf
-                n
-                g
-                nh
-                h
-                
-                rh
-                g
-                h
-                h
-                g
-                
-                h
-                
-                h
-                t
-                h
-                yjn
-                h
-        
-                
-                rh
-                g
-                h
-                h
-                g
-                
-                h
-                
-                h
-                t
-                h
-                yjn
-                h
-                
-                th
-                f
-                h
-                rt
-                h
-                te
-                r
-                
-                h
-                t
-                h
-                rht
-            </pre>
-        </div>
+        <footer id="main-footer">
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> RVAKR.B. <span class="dim">System Status: Online</span></p>
+                <div id="social-links" class="social-links"></div>
+            </div>
+        </footer>
+    </div>
 
+    <script src="js/main.js"></script>
+</body>
 
- 
-
-
-        <script src="js/custom.js"></script>
-        <script src="Java_script.js"></script>
-      
 </html>
