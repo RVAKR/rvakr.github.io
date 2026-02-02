@@ -74,14 +74,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         section.innerHTML = `
             <div class="container">
-                <h2>// ABOUT ME </h2>
-                <div class="grid-container" style="grid-template-columns: 1fr;">
-                    <div class="card">
-                        <p>${profile.bio}</p>
+                <h2>// PROFILE_OVERVIEW </h2>
+                <div class="grid-container">
+                    <div class="card profile-card">
+                        <h3><i class="fas fa-user-circle"></i> Identity</h3>
+                        <p><strong>Full Name:</strong> ${profile.fullName}</p>
+                        <p><strong>Designation:</strong> ${profile.tagline}</p>
+                        <p style="margin-top: 1rem;">${profile.bio}</p>
                         <div class="skills-container" style="margin-top: 2rem;">
                             <h3>DETECTED_SKILLS:</h3>
                             ${skillsHTML}
                         </div>
+                    </div>
+                    
+                    <div class="card search-card">
+                        <h3><i class="fab fa-google"></i> Digital Footprint</h3>
+                        <p>Known globally as <strong>RVAKR</strong>. High search visibility for specialized R&D and Open Source contributions.</p>
+                        <div class="stat-container" style="margin-top: 1.5rem;">
+                            <div class="stat-item">
+                                <span class="stat-label">Search Query:</span>
+                                <span class="stat-value">"rvakr"</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Indexing Status:</span>
+                                <span class="stat-value" style="color: var(--primary-color);">ACTIVE</span>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/search?q=rvakr" target="_blank" class="project-link" style="margin-top: 2rem;">VIEW_GOOGLE_INDEX -></a>
                     </div>
                 </div>
             </div>
