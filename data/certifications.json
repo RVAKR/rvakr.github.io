@@ -1,0 +1,133 @@
+[
+    {
+        "name": "AWS Certified Data Engineer - Associate certificate",
+        "issuer": "AWS",
+        "date": "2028-11-09",
+        "imageUrl": "images/certificates/AWS Certified Data Engineer - Associate certificate.pdf",
+        "verificationLink": "images/certificates/AWS Certified Data Engineer - Associate certificate.pdf",
+        "isLicensed": true,
+        "expirationDate": "2028-11-09",
+        "type": "certificate"
+    },
+    {
+        "name": "AWS Certified Data Engineering Associate",
+        "issuer": "Amazon Web Services",
+        "imageUrl": "images/licensed/aws-certified-data-engineer-associate.png",
+        "link": "https://www.credly.com/badges/96aa71a3-1dfa-42cd-b909-3035682e2597/public_url",
+        "isLicensed": true,
+        "date": "2025-11-09",
+        "expirationDate": "2028-11-09",
+        "type": "badge"
+    },
+    {
+        "name": "Databricks Certified Associate Developer for Apache Spark 3.0",
+        "issuer": "Databricks",
+        "imageUrl": "images/databricks_spark.png",
+        "link": "https://credentials.databricks.com/some-databricks-badge-id",
+        "type": "badge"
+    },
+    {
+        "name": "AWS Shared Responsibility Model",
+        "issuer": "Amazon Web Services",
+        "date": "2023-06-03",
+        "imageUrl": "images/licensed/AWS Shared Responsibility Model.pdf",
+        "verificationLink": "images/licensed/AWS Shared Responsibility Model.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Amazon Web Services: Exploring Business Solutions",
+        "issuer": "LinkedIn",
+        "date": "2023-06-03",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Amazon Web Services Exploring Business Solutions.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Amazon Web Services Exploring Business Solutions.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Introduction to NoSQL",
+        "issuer": "LinkedIn",
+        "date": "2023-05-24",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Introduction to NoSQL.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Introduction to NoSQL.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "How to Learn Faster",
+        "issuer": "LinkedIn",
+        "date": "2023-04-29",
+        "imageUrl": "images/certificates/CertificateOfCompletion_How to Learn Faster.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_How to Learn Faster.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Generative AI for Business Leaders",
+        "issuer": "LinkedIn",
+        "date": "2023-04-XX",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Generative AI for Business Leaders.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Generative AI for Business Leaders.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Figuring Out Your Next Move",
+        "issuer": "LinkedIn",
+        "date": "2023-04-18",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Figuring Out Your Next Move.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Figuring Out Your Next Move.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Apache Spark Essential Training: Big Data Engineering",
+        "issuer": "LinkedIn",
+        "date": "2023-04-17",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Apache Spark Essential Training Big Data Engineering.pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Apache Spark Essential Training Big Data Engineering.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Apache Spark Essential Training: Big Data Engineering (1)",
+        "issuer": "LinkedIn",
+        "date": "2023-04-17",
+        "imageUrl": "images/certificates/CertificateOfCompletion_Apache Spark Essential Training Big Data Engineering (1).pdf",
+        "verificationLink": "images/certificates/CertificateOfCompletion_Apache Spark Essential Training Big Data Engineering (1).pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "AWS Course Completion Certificate",
+        "issuer": "Amazon Web Services",
+        "date": "2023-04-12",
+        "imageUrl": "images/certificates/155_3_3219471_1681374984_AWS Course Completion Certificate.pdf",
+        "verificationLink": "images/certificates/155_3_3219471_1681374984_AWS Course Completion Certificate.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Introduction to AWS Billing and Cost Management",
+        "issuer": "Amazon Web Services",
+        "date": "2023-04-12",
+        "imageUrl": "images/certificates/13012_3_3219471_1681374294_AWS Course Completion Certificate.pdf",
+        "verificationLink": "images/certificates/13012_3_3219471_1681374294_AWS Course Completion Certificate.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Texas Instruments Certificate of Participation in Data Science",
+        "issuer": "TI University Program",
+        "date": "2019-06-23",
+        "imageUrl": "images/certificates/TEXAS INSTRUMENS DS.pdf",
+        "verificationLink": "images/certificates/TEXAS INSTRUMENS DS.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "Texas Instruments Certificate of Participation in Basic Electrical & Electronics",
+        "issuer": "TI University Program",
+        "date": "2019-06-23",
+        "imageUrl": "images/certificates/TEXAS INSTRUMENS BEE.pdf",
+        "verificationLink": "images/certificates/TEXAS INSTRUMENS BEE.pdf",
+        "type": "certificate"
+    },
+    {
+        "name": "CNC Machine using Arduino",
+        "issuer": "Skyfi Labs",
+        "date": "2018-10-01",
+        "imageUrl": "images/certificates/CNC Machine using Arduino by skyfi labs.pdf",
+        "verificationLink": "images/certificates/CNC Machine using Arduino by skyfi labs.pdf",
+        "type": "certificate"
+    }
+]

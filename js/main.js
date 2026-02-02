@@ -8,13 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('data/profile.json').then(res => res.json()),
         fetch('data/skills.json').then(res => res.json()),
         fetch('data/projects.json').then(res => res.json()),
-        fetch('data/socials.json').then(res => res.json())
+        fetch('data/socials.json').then(res => res.json()),
+        fetch('data/certifications.json').then(res => res.json()),
+        fetch('data/activity.json').then(res => res.json())
     ])
-        .then(([profile, skills, projects, socials]) => {
+        .then(([profile, skills, projects, socials, certifications, activity]) => {
             renderNav();
-            renderHero(profile);
+            renderHome(profile);
             renderAbout(profile, skills);
             renderProjects(projects);
+            renderCertifications(certifications);
+            renderActivity(activity);
             renderContact(socials);
             renderFooter(socials);
 
@@ -34,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(err => console.error('Error loading data:', err));
 
     function renderNav() {
-        const sections = ['Hero', 'Projects', 'Contact', 'About'];
+        const sections = ['Home', 'About', 'Projects', 'Certifications', 'Activity', 'Contact'];
         sections.forEach(sec => {
             const li = document.createElement('li');
             const a = document.createElement('a');
@@ -49,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderHero(profile) {
-        const hero = document.getElementById('hero');
-        hero.innerHTML = `
-            <div class="hero-content">
+    function renderHome(profile) {
+        const home = document.getElementById('home');
+        home.innerHTML = `
+            <div class="home-content">
                 <h4 class="greeting">HELLO WORLD, I AM</h4>
                 <h1 class="glitch" data-text="${profile.name}">${profile.name}</h1>
                 <p class="tagline">${profile.tagline}</p>
@@ -131,6 +135,110 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>// PROJECT_LOGS</h2>
                 <div class="grid-container">
                     ${projectsHTML}
+                </div>
+            </div>
+        `;
+        app.appendChild(section);
+    }
+
+    function renderCertifications(certifications) {
+        const section = document.createElement('section');
+        section.id = 'certifications';
+        section.className = 'section';
+
+        const today = new Date();
+
+        certifications.sort((a, b) => {
+            const aIsBadge = a.type === 'badge';
+            const bIsBadge = b.type === 'badge';
+
+            const aIsLicensedAndNotExpired = a.isLicensed && (!a.expirationDate || new Date(a.expirationDate) > today);
+            const bIsLicensedAndNotExpired = b.isLicensed && (!b.expirationDate || new Date(b.expirationDate) > today);
+
+            // 1. Prioritize Badges
+            if (aIsBadge && !bIsBadge) return -1;
+            if (!aIsBadge && bIsBadge) return 1;
+
+            // 2. Then Licensed and Not Expired Certificates (if both are not badges)
+            if (!aIsBadge && !bIsBadge) {
+                if (aIsLicensedAndNotExpired && !bIsLicensedAndNotExpired) return -1;
+                if (!aIsLicensedAndNotExpired && bIsLicensedAndNotExpired) return 1;
+            }
+
+            // 3. For items within the same category, or if categories are equal, sort by date descending
+            const dateA = new Date(a.date || a.expirationDate || '1900-01-01');
+            const dateB = new Date(b.date || b.expirationDate || '1900-01-01');
+            return dateB.getTime() - dateA.getTime();
+        });
+
+        const certificationsHTML = certifications.map(item => {
+            const credentialType = item.isLicensed ? 'LICENSED' : 'PARTICIPATION';
+
+            if (item.type === 'badge') {
+                return `
+                    <div class="card badge-card">
+                        <span class="credential-type-tag">${credentialType}</span>
+                        <img src="${item.imageUrl}" alt="${item.name}" style="max-width: 100px; margin-bottom: 1rem;">
+                        <h3>${item.name}</h3>
+                        <p>Issuer: ${item.issuer}</p>
+                        ${item.expirationDate ? `<p>Expires: ${item.expirationDate}</p>` : ''}
+                        ${item.link ? `<a href="${item.link}" target="_blank" class="project-link">View Badge</a>` : ''}
+                    </div>
+                `;
+            } else if (item.type === 'certificate') {
+                return `
+                    <div class="card certificate-card">
+                        <span class="credential-type-tag">${credentialType}</span>
+                        <h3>${item.name}</h3>
+                        <p>Issuer: ${item.issuer}</p>
+                        <p>Date: ${item.date}</p>
+                        ${item.expirationDate ? `<p>Expires: ${item.expirationDate}</p>` : ''}
+                        ${item.verificationLink ? `<a href="${item.verificationLink}" target="_blank" class="project-link">Verify Certificate</a>` : ''}
+                    </div>
+                `;
+            }
+            return '';
+        }).join('');
+
+        section.innerHTML = `
+            <div class="container">
+                <h2>// CERTIFICATIONS</h2>
+                <div class="grid-container">
+                    ${certificationsHTML}
+                </div>
+            </div>
+        `;
+        app.appendChild(section);
+    }
+
+    function renderActivity(activity) {
+        const section = document.createElement('section');
+        section.id = 'activity';
+        section.className = 'section';
+
+        // Using a more reliable GitHub activity graph service
+        const githubUsername = activity.github.split('/').pop();
+        const githubCalendarImage = `https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=react-dark&bg_color=05050a&color=00f3ff&line=bc13fe&point=ff0055&area=true&hide_border=true`;
+
+        section.innerHTML = `
+            <div class="container">
+                <h2>// ACTIVITY_PULSE</h2>
+                <div class="grid-container">
+                    <div class="card activity-card">
+                        <h3><i class="fab fa-github"></i> GitHub Contribution Graph</h3>
+                        <div class="activity-viz-container">
+                            <img src="${githubCalendarImage}" alt="GitHub Activity Calendar" class="github-activity-calendar">
+                        </div>
+                        <p><a href="${activity.github}" target="_blank" class="project-link">VIEW_FULL_PROFILE -></a></p>
+                    </div>
+
+                    <div class="card activity-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Public Availability</h3>
+                        <div class="calendar-wrapper">
+                            <iframe src="${activity.availability}" style="border: 0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <p class="dim">Real-time availability for meetings and collaborations.</p>
+                    </div>
                 </div>
             </div>
         `;

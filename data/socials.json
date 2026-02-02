@@ -10,6 +10,11 @@
         "icon": "fab fa-linkedin-in"
     },
     {
+        "platform": "Credly",
+        "url": "https://www.credly.com/users/rvakr",
+        "icon": "fab fa-credly"
+    },
+    {
         "platform": "Databricks",
         "url": "https://community.databricks.com/t5/user/viewprofilepage/user-id/119159",
         "icon": "fab fa-databricks"

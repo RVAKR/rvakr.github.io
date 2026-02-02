@@ -51,5 +51,17 @@
         "sourceUrl": "https://github.com/rvakr/pyconnector",
         "isPublic": true,
         "image": "images/project_pypi.jpg"
+    },
+    {
+        "title": "BR Infinity",
+        "category": "Blog",
+        "description": "A blog for latest news and updates on technology.",
+        "techStack": [
+            "Blog",
+            "Technology"
+        ],
+        "projectUrl": "https://br-galaxy.blogspot.com/",
+        "isPublic": true,
+        "image": "images/project_blog.jpg"
     }
 ]
