@@ -2,66 +2,90 @@
     {
         "title": "ChoiceBase",
         "category": "Web Application",
-        "description": "A decision-making framework or tool helping users make better choices.",
+        "badge": "Web Platform",
+        "description": "An interactive decision-making framework and multi-criteria comparison engine helping users make optimal, structured choices with analytical precision.",
         "techStack": [
-            "Web",
-            "Decision Theory"
+            "Web Architecture",
+            "Decision Theory",
+            "JavaScript ES6+",
+            "UI/UX"
         ],
         "projectUrl": "https://choicebase.github.io/",
         "sourceUrl": "https://github.com/choicebase/choicebase.github.io",
         "isPublic": true,
-        "image": "images/project_choicebase.jpg"
-    },
-    {
-        "title": "My Cheat Sheets",
-        "category": "Documentation",
-        "description": "A comprehensive collection of developer cheat sheets for quick reference.",
-        "techStack": [
-            "Documentation",
-            "Reference"
-        ],
-        "projectUrl": "https://my-cheat-sheets.github.io/",
-        "sourceUrl": "https://github.com/my-cheat-sheets/my-cheat-sheets.github.io",
-        "isPublic": true,
-        "image": "images/project_cheatsheets.jpg"
-    },
-    {
-        "title": "My Home Kitchen",
-        "category": "Web Application",
-        "description": "A catalog-based application for managing home and kitchen inventory.",
-        "techStack": [
-            "Web App",
-            "Utility"
-        ],
-        "projectUrl": "https://myhomekitchen.github.io/",
-        "sourceUrl": "https://github.com/myhomekitchen/myhomekitchen.github.io",
-        "isPublic": true,
-        "image": "images/project_kitchen.jpg"
+        "featured": true,
+        "image": "images/project_choicebase.png",
+        "icon": "fas fa-balance-scale"
     },
     {
         "title": "PyConnector",
         "category": "Python Library",
-        "description": "A Python package for simplified connectivity.",
+        "badge": "PyPI Package",
+        "description": "A high-performance Python package published on PyPI for simplified, robust, and reusable system and service connectivity.",
         "techStack": [
             "Python",
-            "PyPI",
-            "Library"
+            "PyPI Package",
+            "Open Source",
+            "API Architecture"
         ],
         "projectUrl": "https://pypi.org/project/pyconnector/",
         "sourceUrl": "https://github.com/rvakr/pyconnector",
         "isPublic": true,
-        "image": "images/project_pypi.jpg"
+        "featured": true,
+        "image": "",
+        "icon": "fab fa-python"
+    },
+    {
+        "title": "My Cheat Sheets",
+        "category": "Developer Tools",
+        "badge": "Knowledge Base",
+        "description": "A comprehensive, curated repository of developer cheat sheets, quick-reference guides, syntax lookups, and best practices across modern engineering stacks.",
+        "techStack": [
+            "Documentation",
+            "DevOps",
+            "Cheat Sheets",
+            "Open Knowledge"
+        ],
+        "projectUrl": "https://my-cheat-sheets.github.io/",
+        "sourceUrl": "https://github.com/my-cheat-sheets/my-cheat-sheets.github.io",
+        "isPublic": true,
+        "featured": false,
+        "image": "",
+        "icon": "fas fa-terminal"
+    },
+    {
+        "title": "My Home Kitchen",
+        "category": "Web Application",
+        "badge": "Utility App",
+        "description": "A catalog-based smart inventory management and utility application designed for streamlined household and kitchen organization.",
+        "techStack": [
+            "Web App",
+            "Inventory Engine",
+            "Frontend",
+            "Responsive UI"
+        ],
+        "projectUrl": "https://myhomekitchen.github.io/",
+        "sourceUrl": "https://github.com/myhomekitchen/myhomekitchen.github.io",
+        "isPublic": true,
+        "featured": false,
+        "image": "",
+        "icon": "fas fa-utensils"
     },
     {
         "title": "BR Infinity",
-        "category": "Blog",
-        "description": "A blog for latest news and updates on technology.",
+        "category": "Tech Publication",
+        "badge": "Articles & R&D",
+        "description": "Technology blog delivering deep dives, architectural insights, emerging tech breakdowns, and R&D analysis across software and cloud engineering.",
         "techStack": [
-            "Blog",
-            "Technology"
+            "Tech Journalism",
+            "R&D Analysis",
+            "Cloud Trends",
+            "Architecture"
         ],
         "projectUrl": "https://br-galaxy.blogspot.com/",
         "isPublic": true,
-        "image": "images/project_blog.jpg"
+        "featured": false,
+        "image": "",
+        "icon": "fas fa-satellite-dish"
     }
 ]

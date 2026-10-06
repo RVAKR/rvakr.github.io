@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills &amp; Technologies - RVAKR Data Consultant</title>
+    <meta name="description" content="Detailed skills breakdown with proficiency ratings, categorized by data engineering, AI, cloud platforms, and web development.">
+    <meta name="author" content="RVAKR">
+    <link rel="icon" type="image/png" href="../images/rvakr.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Data + AI themed background canvas -->
+    <div class="bg-layer">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg-grid-overlay"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">&lt;RVAKR<span class="slash">/</span>&gt;</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                    <li><a href="projects.html" class="nav-link">Builds</a></li>
+                    <li><a href="certifications.html" class="nav-link">Badges</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">// TECHNICAL_STACK</span>
+                    <h2>Skills &amp; Technologies</h2>
+                    <p class="section-desc">
+                        Proficiency ratings based on real-world engineering, cloud certifications, and project delivery.
+                    </p>
+                </div>
+
+                <!-- Interactive Skill Node Graph -->
+                <div class="graph-container-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 8px;">
+                        <h3 style="margin: 0;"><i class="fas fa-project-diagram" style="color: var(--primary); margin-right: 8px;"></i> Interactive Technology Ecosystem Graph</h3>
+                        <span style="font-size: 0.85rem; color: var(--primary); font-family: var(--font-mono); background: rgba(0, 243, 255, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(0, 243, 255, 0.3);">
+                            <i class="fas fa-hand-pointer"></i> Hover / Tap nodes for stack details
+                        </span>
+                    </div>
+                    <svg id="skillGraphSvg"></svg>
+                    <div id="graphTooltip" class="graph-tooltip"></div>
+                </div>
+
+                <!-- Skills Categories -->
+                <div class="skills-categories">
+                    <!-- Pillar 1: Data Engineering & Solutions -->
+                    <div class="skills-category" style="border-color: rgba(var(--primary-rgb), 0.3);">
+                        <h3><i class="fas fa-database" style="color: var(--primary);"></i> 1. Data Engineering &amp; Distributed Systems</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Medallion Lakehouses, distributed Spark/Scala processing, real-time streaming, and high-scale ETL/ELT pipelines.</p>
+                        <div class="skills-grid">
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-stream skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">ETL / ELT Pipelines</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Real-time &amp; batch pipelines, bronze-to-silver deduplication &amp; unification, and data quality validation.</p>
+                            </div>
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-bolt skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Apache Spark &amp; Scala</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Distributed PySpark &amp; Scala computing, structured streaming, partition optimization, and cluster tuning.</p>
+                            </div>
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-cubes skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Databricks &amp; Delta Lake</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Unity Catalog, Delta Lake, Delta Sharing, Lakebase control app, Auto Loader, and Medallion architecture.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-database skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">SQL &amp; Data Modeling</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Dimensional modeling, Snowflake, Redshift, PostgreSQL, Oracle, window functions, and query optimization.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-cloud-download-alt skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Automated Ingestion</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Automated ingestion via Fivetran, S3 Auto Loader, and multi-region pipelines across US, UK, JP (600+ tables).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Multi-Cloud Platform Engineering -->
+                    <div class="skills-category" style="border-color: rgba(var(--secondary-rgb), 0.3);">
+                        <h3><i class="fas fa-server" style="color: var(--secondary);"></i> 2. Platform Engineering (Scratch to Scale)</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Multi-cluster infrastructure handling 100+ TB &amp; 5M+ tables, ~70% script templating via metadata frameworks, and disaster recovery architectures.</p>
+                        <div class="skills-grid">
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fab fa-aws skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">AWS Ecosystem</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">AWS Certified: S3, Glue, Redshift, Lambda, EMR, Athena, API Gateway, DynamoDB, IAM, KMS.</p>
+                            </div>
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-wind skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Airflow &amp; Orchestration</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Metadata-driven DAG orchestration (~95% code reduction), MWAA, and automated data quality validation.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-cloud skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Azure &amp; GCP</div><div class="skill-rating">8/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+                                <p class="skill-desc">Azure Databricks, ADF, ADLS Gen2, Google BigQuery, Dataproc, and GCS multi-cloud architectures.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fab fa-docker skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">DevOps, Docker &amp; IaC</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Docker containerization, Kubernetes, Terraform IaC, GitHub Actions CI/CD, and Linux administration.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-shield-alt skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Governance &amp; Security</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Row-level security (RLS), dynamic data masking, Unity Catalog fine-grained access, and Delta Sharing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Microservices & Web Architecture -->
+                    <div class="skills-category" style="border-color: rgba(255, 0, 85, 0.3);">
+                        <h3><i class="fas fa-rocket" style="color: var(--accent);"></i> 3. Microservices &amp; API Development</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Fast, scalable microservice APIs built with Python frameworks and modern stacks.</p>
+                        <div class="skills-grid">
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-bolt skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">FastAPI &amp; Flask</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">High-concurrency async REST APIs, Pydantic validation, OpenAPI docs, and auth layers.</p>
+                            </div>
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fab fa-python skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Python &amp; Package Authoring</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Author of pyconnector package, OOP design, async I/O, and automated test suites.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-tachometer-alt skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Real-Time Engines</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Sub-second multi-vendor calculation APIs refreshed every ~30 minutes on DynamoDB &amp; Lambda.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fab fa-js-square skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">Web Dashboards &amp; UIs</div><div class="skill-rating">8/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+                                <p class="skill-desc">Modern JS frontends, Lakebase control portals, interactive visualizations, and Streamlit apps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4: AI Ready & AI Development -->
+                    <div class="skills-category" style="border-color: rgba(16, 185, 129, 0.3);">
+                        <h3><i class="fas fa-brain" style="color: #10b981;"></i> 4. AI-Ready Systems &amp; AI Development</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Preparing data infrastructure for AI and building LLM/RAG applications.</p>
+                        <div class="skills-grid">
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-layer-group skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">RAG &amp; Vector Stores</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Vector indexing (Pinecone, ChromaDB, pgvector), retrieval pipelines, and semantic search.</p>
+                            </div>
+                            <div class="skill-card featured">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-robot skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">LLM &amp; Agent Workflows</div><div class="skill-rating">9/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                                <p class="skill-desc">Integration with Claude Code, OpenAI, LangChain, and structured AI agent workflows.</p>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon-wrap"><i class="fas fa-cogs skill-icon"></i></div>
+                                    <div class="skill-meta"><div class="skill-name">AI Data Preparation</div><div class="skill-rating">10/10</div></div>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+                                <p class="skill-desc">Feature engineering, embedding generation pipelines, and curated gold AI datasets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo small">&lt;RVAKR<span class="slash">/</span>&gt;</div>
+                <p>Data Consultant · AWS Certified Data Engineer · AI &amp; Web App Developer</p>
+            </div>
+            <div class="footer-social" id="footerSocial"></div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> RVAKR (Reddy Veera Akhil Kumar Reddy). All rights reserved.</p>
+                <p class="dim">Built with ☕ and ☁️</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/graph.js"></script>
+</body>
+</html>

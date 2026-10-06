@@ -1,67 +1,449 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RVAKR Tech Portfolio</title>
-    <meta name="description" content="R&D Engineer and Open Source Enthusiast Portfolio">
-
-    <!-- Fonts -->
+    <title>RVAKR | Data Consultant &amp; AI Systems Engineer</title>
+    <meta name="description" content="RVAKR - Data Consultant & AWS Certified Data Engineer specializing in scalable data pipelines, Lakehouse platforms, AI microservices, and freelance/full-time consulting.">
+    <meta name="author" content="RVAKR">
+    <link rel="icon" type="image/png" href="images/rvakr.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div id="bg-canvas-container">
+    <!-- Data + AI themed background canvas -->
+    <div class="bg-layer">
         <canvas id="bg-canvas"></canvas>
+        <div class="bg-grid-overlay"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
     </div>
 
-    <div class="interface-overlay">
-        <header id="main-header">
-            <div class="logo">RVAKR<span class="cursor">_</span></div>
-            <nav>
-                <ul id="nav-list">
-                    <!-- Dynamic Nav Items -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">&lt;RVAKR<span class="slash">/</span>&gt;</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#profiles" class="nav-link">Profiles</a></li>
+                    <li><a href="pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="pages/skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="pages/projects.html" class="nav-link">Builds</a></li>
+                    <li><a href="pages/certifications.html" class="nav-link">Badges</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <div class="theme-toggle-container">
-                <button id="theme-toggle" aria-label="Toggle Theme">
-                    <i class="fas fa-sun"></i>
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <main id="app">
-            <!-- Sections will be injected here via JS -->
-            <section id="home" class="section">
-                <div class="home-content">
-                    <h1 class="glitch" data-text="LOADING...">LOADING...</h1>
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="status-pill"><span class="pulse"></span> Open for Full-Time Roles &amp; Freelance Consulting</div>
+                <p class="greeting">Welcome to my portfolio</p>
+                <h1 class="hero-name">RVAKR</h1>
+                <div class="typing-wrapper">
+                    <span class="prompt">➜</span>
+                    <span class="typed" id="typedRole"></span><span class="caret"></span>
                 </div>
-            </section>
-        </main>
-
-        <footer id="main-footer">
-            <div class="footer-content">
-                <p>&copy; <span id="year"></span> RVAKR. <span class="dim">Status: Online</span></p>
-                <div id="social-links" class="social-links"></div>
+                <p class="hero-bio">
+                    <strong>Senior Data Platform Engineer</strong> with 6+ years of experience engineering high-throughput <strong>multi-cluster systems</strong> handling <strong>100+ TB data systems with over 5 million tables</strong> (built to scale to 10M). 
+                    Proven track record of templating <strong>~70% of scripts via metadata-driven automation (~95% code reduction)</strong>, 
+                    multi-cloud platform delivery across <strong>AWS, Databricks, Azure, and GCP</strong>, high-concurrency <strong>microservices (FastAPI, Flask, Lambda)</strong>, and 
+                    <strong>enterprise AI-ready systems</strong>.
+                </p>
+                <div class="hero-actions">
+                    <a href="pages/contact.html" class="btn btn-primary"><i class="fas fa-briefcase"></i> Hire / Consult</a>
+                    <a href="#recognition" class="btn btn-outline"><i class="fas fa-award"></i> View Recognition</a>
+                    <a href="pages/certifications.html" class="btn btn-ghost"><i class="fas fa-shield-halved"></i> Certifications</a>
+                </div>
             </div>
-        </footer>
-    </div>
+            <div class="hero-visual">
+                <div class="avatar-ring"></div>
+                <img src="images/rvakr.png" alt="RVAKR profile photo" class="avatar" onerror="this.style.display='none'">
+                <div class="avatar-badge"><i class="fas fa-shield-halved"></i> AWS Certified Data Engineer</div>
+            </div>
+        </section>
 
-    <script src="js/main.js"></script>
+        <!-- STATS / PROVEN SCALE METRICS -->
+        <section class="stats-strip" id="stats">
+            <div class="stat">
+                <i class="fas fa-calendar-check" style="color: var(--primary);"></i>
+                <span class="stat-val">6+ Years</span>
+                <span class="stat-label">Senior Platform &amp; Data Engineering</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-database" style="color: var(--secondary);"></i>
+                <span class="stat-val">100+ TB · 5M+</span>
+                <span class="stat-label">Data Scale &amp; Production Tables</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-cubes-stacked" style="color: var(--accent);"></i>
+                <span class="stat-val">70% Templated</span>
+                <span class="stat-label">Metadata Scripts (~95% Less Code)</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-network-wired" style="color: #10b981;"></i>
+                <span class="stat-val">Multi-Cluster</span>
+                <span class="stat-label">Distributed Lakehouses &amp; Multi-Cloud</span>
+            </div>
+        </section>
+
+        <!-- CLIENT RECOGNITION & AWARDS HIGHLIGHT -->
+        <section class="section" id="recognition" style="padding-top: 20px; padding-bottom: 30px;">
+            <div class="container">
+                <div style="background: linear-gradient(135deg, rgba(0, 243, 255, 0.08), rgba(188, 19, 254, 0.08)); border: 1px solid rgba(0, 243, 255, 0.25); border-radius: 12px; padding: 24px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: center;">
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(0, 243, 255, 0.15); border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-award" style="color: var(--primary); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <span class="badge-tag" style="background: rgba(0,243,255,0.15); color: var(--primary); margin-bottom: 4px; display: inline-block;">From Client</span>
+                            <h4 style="margin: 2px 0 6px; font-family: var(--font-heading); font-size: 1.05rem;">“Lone Wolf” Title — Conferred by Client Leadership</h4>
+                            <p style="font-size: 0.86rem; color: var(--text-dim); margin: 0; line-height: 1.4;">Conferred directly by client leadership for single-handedly architecting, building, and delivering a complete enterprise data platform in record time.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <div style="width: 48px; height: 48px; border-radius: 10px; background: rgba(188, 19, 254, 0.15); border: 1px solid var(--secondary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-trophy" style="color: var(--secondary); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <span class="badge-tag" style="background: rgba(188,19,254,0.15); color: var(--secondary); margin-bottom: 4px; display: inline-block;">From Senior Management</span>
+                            <h4 style="margin: 2px 0 6px; font-family: var(--font-heading); font-size: 1.05rem;">“On the Spot” Recognition — From Senior Management</h4>
+                            <p style="font-size: 0.86rem; color: var(--text-dim); margin: 0; line-height: 1.4;">Recognized by senior leadership for rapid resolution of critical production pipelines and implementing automated multi-region AWS Glue ingestion across US, UK, and Japan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES & CONSULTING OFFERINGS -->
+        <section class="section" id="services">
+            <div class="section-head">
+                <span class="section-tag">// WHAT_I_SOLVE_&amp;_BUILD</span>
+                <h2>Core Engineering Pillars</h2>
+                <p class="section-desc">Tailored consulting services and production engineering solutions across the full data, platform, and AI lifecycle.</p>
+            </div>
+            <div class="card-grid">
+                <!-- Pillar 1: Data Engineering -->
+                <div class="card domain-card">
+                    <div class="domain-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <p>Complete solutions for any data challenge. Resilient ETL/ELT pipelines, Lakehouses (Delta Lake), real-time streaming, and high-performance SQL architectures.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Apache Spark</span>
+                        <span class="tech-tag">Delta Lake</span>
+                        <span class="tech-tag">ETL/ELT</span>
+                        <span class="tech-tag">SQL Tuning</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="pages/contact.html?service=data-engineering" class="project-link"><i class="fas fa-paper-plane"></i> Inquire Data Solution</a>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Platform Engineering -->
+                <div class="card domain-card">
+                    <div class="domain-icon"><i class="fas fa-server"></i></div>
+                    <h3>Platform Engineering</h3>
+                    <p>Building modern platforms from scratch. Multi-cloud architectures across AWS, GCP, Azure, and Databricks with Kubernetes, Docker, and automated CI/CD pipelines.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Databricks</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="pages/contact.html?service=platform-engineering" class="project-link"><i class="fas fa-paper-plane"></i> Inquire Platform Setup</a>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Microservices -->
+                <div class="card domain-card">
+                    <div class="domain-icon web"><i class="fas fa-cubes-stacked"></i></div>
+                    <h3>Microservices &amp; APIs</h3>
+                    <p>Designing and developing modular, high-throughput microservices using FastAPI, Flask, and Node.js. Asynchronous APIs, containerized deployments, and clean system integrations.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">REST / Async</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="pages/contact.html?service=microservices" class="project-link"><i class="fas fa-paper-plane"></i> Inquire Microservices</a>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: AI Readiness & Development -->
+                <div class="card domain-card">
+                    <div class="domain-icon ai"><i class="fas fa-brain"></i></div>
+                    <h3>AI-Ready Systems &amp; AI Dev</h3>
+                    <p>Transforming legacy environments into AI-Ready Systems with vector databases and data pipelines. Developing custom RAG architectures, model serving APIs, and GenAI agents.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AI Readiness</span>
+                        <span class="tech-tag">RAG / LLMs</span>
+                        <span class="tech-tag">Vector Stores</span>
+                        <span class="tech-tag">Model Serving</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="pages/contact.html?service=ai-systems" class="project-link"><i class="fas fa-paper-plane"></i> Inquire AI Development</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL PROFILES & SOCIAL HUB -->
+        <section class="section" id="profiles">
+            <div class="section-head">
+                <span class="section-tag">// CONNECT_&amp;_FOLLOW_HUB</span>
+                <h2>Professional Profiles &amp; Networks</h2>
+                <p class="section-desc">Follow my work, verify credentials, collaborate on projects, or chat directly across official platforms.</p>
+            </div>
+
+            <!-- Professional & Developer Profiles Grid -->
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <!-- LinkedIn -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="profile-meta">
+                            <h4>LinkedIn</h4>
+                            <span class="handle">in/rvakr</span>
+                        </div>
+                        <span class="badge-tag">Verified Network</span>
+                    </div>
+                    <p class="profile-desc">Professional updates, career insights, architecture articles, and direct recruitment messaging.</p>
+                    <a href="https://www.linkedin.com/in/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon github"><i class="fab fa-github"></i></div>
+                        <div class="profile-meta">
+                            <h4>GitHub</h4>
+                            <span class="handle">@rvakr</span>
+                        </div>
+                        <span class="badge-tag">Open Source</span>
+                    </div>
+                    <p class="profile-desc">Explore open-source repositories, data engineering pipelines, Python packages, and contributions.</p>
+                    <a href="https://github.com/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-github"></i> Follow on GitHub
+                    </a>
+                </div>
+
+                <!-- Credly -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon credly"><i class="fas fa-certificate"></i></div>
+                        <div class="profile-meta">
+                            <h4>Credly</h4>
+                            <span class="handle">credly.com/users/rvakr</span>
+                        </div>
+                        <span class="badge-tag">Verified Badges</span>
+                    </div>
+                    <p class="profile-desc">Digitally verified industry badges including AWS Certified Data Engineer Associate credentials.</p>
+                    <a href="https://www.credly.com/users/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fas fa-award"></i> View Credentials
+                    </a>
+                </div>
+
+                <!-- Databricks Community -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon databricks"><i class="fas fa-cubes"></i></div>
+                        <div class="profile-meta">
+                            <h4>Databricks Community</h4>
+                            <span class="handle">User ID #119159</span>
+                        </div>
+                        <span class="badge-tag">Lakehouse Expert</span>
+                    </div>
+                    <p class="profile-desc">Apache Spark, Delta Lake query optimizations, distributed cluster tuning, and solutions.</p>
+                    <a href="https://community.databricks.com/t5/user/viewprofilepage/user-id/119159" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fas fa-database"></i> Databricks Profile
+                    </a>
+                </div>
+
+                <!-- HackerRank -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon hackerrank"><i class="fas fa-code"></i></div>
+                        <div class="profile-meta">
+                            <h4>HackerRank</h4>
+                            <span class="handle">hackerrank.com/rvakr</span>
+                        </div>
+                        <span class="badge-tag">Top 5% SQL</span>
+                    </div>
+                    <p class="profile-desc">Advanced SQL problem solving, algorithmic optimization, and technical programming badges.</p>
+                    <a href="https://www.hackerrank.com/profile/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fas fa-code"></i> View Solutions
+                    </a>
+                </div>
+
+                <!-- PyPI -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon pypi"><i class="fab fa-python"></i></div>
+                        <div class="profile-meta">
+                            <h4>PyPI Repository</h4>
+                            <span class="handle">pypi.org/project/pyconnector</span>
+                        </div>
+                        <span class="badge-tag">Published Package</span>
+                    </div>
+                    <p class="profile-desc">Official Python package index for PyConnector, simplifying system and service integrations.</p>
+                    <a href="https://pypi.org/project/pyconnector/" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-python"></i> PyPI Package
+                    </a>
+                </div>
+
+                <!-- YouTube - CodeXLabs -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon youtube"><i class="fab fa-youtube"></i></div>
+                        <div class="profile-meta">
+                            <h4>CodeXLabs</h4>
+                            <span class="handle">@codexlabs</span>
+                        </div>
+                        <span class="badge-tag">Tech &amp; Lab</span>
+                    </div>
+                    <p class="profile-desc">Deep-dive video walkthroughs, data engineering experiments, cloud tutorials, and AI systems.</p>
+                    <a href="https://www.youtube.com/@codexlabs" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-youtube"></i> Subscribe to Channel
+                    </a>
+                </div>
+
+                <!-- YouTube - CodeWithBR -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon youtube"><i class="fab fa-youtube"></i></div>
+                        <div class="profile-meta">
+                            <h4>CodeWithBR</h4>
+                            <span class="handle">@codewithbr</span>
+                        </div>
+                        <span class="badge-tag">Code Tutorials</span>
+                    </div>
+                    <p class="profile-desc">Hands-on coding guides, Python automation, and software engineering practical sessions.</p>
+                    <a href="https://www.youtube.com/@codewithbr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-youtube"></i> Subscribe on YouTube
+                    </a>
+                </div>
+
+                <!-- X (Twitter) -->
+                <div class="card profile-link-card">
+                    <div class="profile-card-header">
+                        <div class="profile-icon x"><i class="fab fa-x-twitter"></i></div>
+                        <div class="profile-meta">
+                            <h4>X (Twitter)</h4>
+                            <span class="handle">@rvakr</span>
+                        </div>
+                        <span class="badge-tag">Tech Thoughts</span>
+                    </div>
+                    <p class="profile-desc">Daily engineering insights, cloud computing updates, AI breakthroughs, and quick discussions.</p>
+                    <a href="https://twitter.com/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn">
+                        <i class="fab fa-x-twitter"></i> Follow @rvakr
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS -->
+        <section class="section" id="featured">
+            <div class="section-head">
+                <span class="section-tag">// FEATURED_WORK</span>
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <div class="project-media">
+                        <img src="images/project_choicebase.png" alt="ChoiceBase project" onerror="this.outerHTML='<div class=\'media-placeholder\'><i class=\'fas fa-balance-scale media-icon\'></i></div>'">
+                        <div class="project-badge">Web Platform</div>
+                    </div>
+                    <h3>ChoiceBase</h3>
+                    <p>Decision-making framework and multi-criteria comparison engine for optimal choices.</p>
+                    <div class="project-links">
+                        <a href="https://choicebase.github.io/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        <a href="https://github.com/choicebase/choicebase.github.io" class="project-link source" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="project-media">
+                        <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(0,243,255,0.15), rgba(188,19,254,0.15)); display:flex; align-items:center; justify-content:center; height: 160px; border-radius: 8px;">
+                            <i class="fab fa-python media-icon" style="font-size: 3.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div class="project-badge">Python Library</div>
+                    </div>
+                    <h3>PyConnector</h3>
+                    <p>High-performance Python package for simplified system and service connectivity, published on PyPI.</p>
+                    <div class="project-links">
+                        <a href="https://pypi.org/project/pyconnector/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> PyPI</a>
+                        <a href="https://github.com/rvakr/pyconnector" class="project-link source" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="project-media">
+                        <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(0,255,157,0.15), rgba(0,243,255,0.15)); display:flex; align-items:center; justify-content:center; height: 160px; border-radius: 8px;">
+                            <i class="fas fa-utensils media-icon" style="font-size: 3.5rem; color: var(--success);"></i>
+                        </div>
+                        <div class="project-badge">Web App</div>
+                    </div>
+                    <h3>My Home Kitchen</h3>
+                    <p>Smart inventory management and utility application for household and kitchen organization.</p>
+                    <div class="project-links">
+                        <a href="https://myhomekitchen.github.io/" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live View</a>
+                        <a href="https://github.com/myhomekitchen/myhomekitchen.github.io" class="project-link source" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+            <div class="center-actions">
+                <a href="pages/projects.html" class="btn btn-outline"><i class="fas fa-layer-group"></i> All Projects</a>
+                <a href="pages/skills.html" class="btn btn-ghost"><i class="fas fa-list"></i> Full Skills List</a>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-band" id="cta">
+            <span class="section-tag">// READY_TO_COLLABORATE</span>
+            <h2>Let's build your next data platform</h2>
+            <p>Available for full-time engineering roles, freelance consulting, and high-impact advisory.</p>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+                <a href="pages/contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Start a Conversation</a>
+                <a href="mailto:contactmail.br@gmail.com?subject=Direct%20Inquiry%20from%20Portfolio" class="btn btn-outline"><i class="fas fa-envelope"></i> Quick Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo small">&lt;RVAKR<span class="slash">/</span>&gt;</div>
+                <p>Data Consultant · AWS Certified Data Engineer · AI &amp; Web App Developer</p>
+            </div>
+            <div class="footer-social" id="footerSocial"></div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> RVAKR (Reddy Veera Akhil Kumar Reddy). All rights reserved.</p>
+                <p class="dim">Built with ☕ and ☁️</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script type="module" src="js/main.js"></script>
 </body>
-
 </html>

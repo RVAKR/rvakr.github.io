@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects, Solutions &amp; Contributions - RVAKR</title>
+    <meta name="description" content="Enterprise data platform solutions, open-source software (pyconnector, ChoiceBase), and community technical contributions by RVAKR.">
+    <meta name="author" content="RVAKR">
+    <link rel="icon" type="image/png" href="../images/rvakr.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Data + AI themed background canvas -->
+    <div class="bg-layer">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg-grid-overlay"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">&lt;RVAKR<span class="slash">/</span>&gt;</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="projects.html" class="nav-link active">Builds</a></li>
+                    <li><a href="certifications.html" class="nav-link">Badges</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">// WORK_&amp;_CONTRIBUTIONS</span>
+                    <h2>Projects, Solutions &amp; Contributions</h2>
+                    <p class="section-desc">
+                        A unified showcase of enterprise multi-cluster platform case studies (handling 100+ TB across 5M+ tables), published open-source software, and developer community contributions.
+                    </p>
+                </div>
+
+                <!-- In-Page Category Filter Buttons (Top of Page) -->
+                <div style="display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <a href="#enterprise-solutions" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 18px;">
+                        <i class="fas fa-server"></i> Enterprise Solutions
+                    </a>
+                    <a href="#open-source" class="btn btn-outline" style="font-size: 0.9rem; padding: 8px 18px;">
+                        <i class="fab fa-github"></i> Open Source &amp; Software
+                    </a>
+                    <a href="#community-solutions" class="btn btn-ghost" style="font-size: 0.9rem; padding: 8px 18px;">
+                        <i class="fas fa-users"></i> Community Contributions
+                    </a>
+                </div>
+
+                <!-- 1. Enterprise Production Solutions & Architectures -->
+                <div class="card" id="enterprise-solutions" style="margin-bottom: 2.5rem; padding: 2rem; scroll-margin-top: 90px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px;">
+                        <h3 style="margin: 0;"><i class="fas fa-server" style="color: var(--primary); margin-right: 0.5rem;"></i>1. Enterprise Production Solutions (Case Studies)</h3>
+                        <span class="badge-tag">Scale &amp; Architecture</span>
+                    </div>
+                    <div class="card-grid">
+                        <!-- 2M Tables Lakehouse -->
+                        <div class="card project-card">
+                            <div class="project-content">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                                    <span class="badge-tag" style="background: rgba(0,243,255,0.15); color: var(--primary);">100+ TB · 5M+ Tables</span>
+                                    <span class="badge-tag" style="border-color: rgba(0,243,255,0.3);"><i class="fas fa-award"></i> Conferred “Lone Wolf”</span>
+                                </div>
+                                <h3>Multi-Tenant Medallion Lakehouse</h3>
+                                <p class="project-desc">End-to-end cloud platform built on Databricks, Fivetran, S3 Auto Loader, and Lakebase handling <strong>100+ TB across 5+ million tables (built to scale to 10M)</strong> with disaster recovery safeguards and central control database logging.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Databricks</span>
+                                    <span class="tech-tag">Delta Sharing</span>
+                                    <span class="tech-tag">Auto Loader</span>
+                                    <span class="tech-tag">Lakebase Control DB</span>
+                                    <span class="tech-tag">PySpark</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 95% Less Code Framework -->
+                        <div class="card project-card">
+                            <div class="project-content">
+                                <span class="badge-tag" style="background: rgba(188,19,254,0.15); color: var(--secondary); margin-bottom: 0.5rem; display: inline-block;">Bolt Tech · ~95% Code Reduction</span>
+                                <h3>Metadata-Driven Spark Pipeline Engine</h3>
+                                <p class="project-desc">Replaced 2,000 lines of hardcoded pipelines with <strong>~100 lines of configuration</strong> across 22 customers and 400+ silver tables on Azure Databricks, increasing team delivery efficiency by ~40%.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Azure Databricks</span>
+                                    <span class="tech-tag">Scala / Spark SQL</span>
+                                    <span class="tech-tag">Apache Airflow</span>
+                                    <span class="tech-tag">Metadata Config</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Global Glue Ingestion -->
+                        <div class="card project-card">
+                            <div class="project-content">
+                                <span class="badge-tag" style="background: rgba(255,0,85,0.15); color: var(--accent); margin-bottom: 0.5rem; display: inline-block;">TCS · 600+ Tables</span>
+                                <h3>Global Multi-Region Ingestion Framework</h3>
+                                <p class="project-desc">Ingested <strong>600+ tables across US, UK, and Japan</strong> from a single metadata-driven AWS Glue script with JSON schemas, row-level access control, and automated Salesforce/Oracle feeds.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">AWS Glue</span>
+                                    <span class="tech-tag">Amazon S3</span>
+                                    <span class="tech-tag">Salesforce</span>
+                                    <span class="tech-tag">Oracle ERP</span>
+                                    <span class="tech-tag">Redshift</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Low Latency DynamoDB Quoting API -->
+                        <div class="card project-card">
+                            <div class="project-content">
+                                <span class="badge-tag" style="background: rgba(0,255,157,0.15); color: var(--success); margin-bottom: 0.5rem; display: inline-block;">Bolt Tech · Real-Time API</span>
+                                <h3>Microservice Real-Time Quoting Engine</h3>
+                                <p class="project-desc">Low-latency API engine built on AWS DynamoDB, API Gateway, and Lambda calculating multi-vendor quotes refreshed every ~30 minutes with historical audit states in Delta Sharing.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">AWS DynamoDB</span>
+                                    <span class="tech-tag">API Gateway</span>
+                                    <span class="tech-tag">AWS Lambda</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Open Source & Published Software -->
+                <div class="card" id="open-source" style="margin-bottom: 2.5rem; padding: 2rem; scroll-margin-top: 90px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px;">
+                        <h3 style="margin: 0;"><i class="fab fa-github" style="color: var(--secondary); margin-right: 0.5rem;"></i>2. Open Source &amp; Published Software</h3>
+                        <span class="badge-tag">Community Packages</span>
+                    </div>
+                    <div class="card-grid">
+                        <!-- PyConnector -->
+                        <div class="card project-card">
+                            <div class="project-media">
+                                <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(0,243,255,0.15), rgba(188,19,254,0.15)); display:flex; align-items:center; justify-content:center; height: 160px; border-radius: 8px;">
+                                    <i class="fab fa-python media-icon" style="font-size: 3.5rem; color: var(--primary);"></i>
+                                </div>
+                                <div class="project-badge">PyPI Package</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>pyconnector (Python Package)</h3>
+                                <p class="project-desc">Published open-source Python library providing unified, zero-boilerplate connectivity to Databricks, PostgreSQL, MySQL, SMTP, and SFTP across pipeline workflows.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">PyPI</span>
+                                    <span class="tech-tag">Databricks</span>
+                                    <span class="tech-tag">Database Connector</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://pypi.org/project/pyconnector/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> PyPI</a>
+                                    <a href="https://github.com/rvakr/pyconnector" target="_blank" rel="noopener noreferrer" class="project-link source"><i class="fab fa-github"></i> Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ChoiceBase -->
+                        <div class="card project-card">
+                            <div class="project-media">
+                                <img src="../images/project_choicebase.png" alt="ChoiceBase Project" class="project-image" onerror="this.outerHTML='<div class=\'media-placeholder\'><i class=\'fas fa-balance-scale media-icon\'></i></div>'">
+                                <div class="project-badge">Web Platform</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>ChoiceBase Community Hub</h3>
+                                <p class="project-desc">Free community platform for curated courses, developer tools, and job boards. Built as a zero-cost static web architecture running on GitHub Pages.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Web Platform</span>
+                                    <span class="tech-tag">Zero-Cost Hosting</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://choicebase.github.io/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                                    <a href="https://github.com/choicebase/choicebase.github.io" target="_blank" rel="noopener noreferrer" class="project-link source"><i class="fab fa-github"></i> Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- My Cheat Sheets -->
+                        <div class="card project-card">
+                            <div class="project-media">
+                                <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(188,19,254,0.15), rgba(255,0,85,0.15)); display:flex; align-items:center; justify-content:center; height: 160px; border-radius: 8px;">
+                                    <i class="fas fa-book-bookmark media-icon" style="font-size: 3.5rem; color: var(--secondary);"></i>
+                                </div>
+                                <div class="project-badge">Knowledge Hub</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>My Cheat Sheets</h3>
+                                <p class="project-desc">Comprehensive reference repository and developer cheat sheets covering cloud architecture, Spark SQL, Docker commands, and DevOps patterns.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Documentation</span>
+                                    <span class="tech-tag">Architecture</span>
+                                    <span class="tech-tag">Cloud &amp; DevOps</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://my-cheat-sheets.github.io/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                                    <a href="https://github.com/my-cheat-sheets/my-cheat-sheets.github.io" target="_blank" rel="noopener noreferrer" class="project-link source"><i class="fab fa-github"></i> Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- My Home Kitchen -->
+                        <div class="card project-card">
+                            <div class="project-media">
+                                <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(0,255,157,0.15), rgba(0,243,255,0.15)); display:flex; align-items:center; justify-content:center; height: 160px; border-radius: 8px;">
+                                    <i class="fas fa-utensils media-icon" style="font-size: 3.5rem; color: var(--success);"></i>
+                                </div>
+                                <div class="project-badge">Utility App</div>
+                            </div>
+                            <div class="project-content">
+                                <h3>My Home Kitchen</h3>
+                                <p class="project-desc">Smart inventory tracking and utility web application for household tracking, replenishment workflows, and pantry management.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Web App</span>
+                                    <span class="tech-tag">Inventory</span>
+                                    <span class="tech-tag">UI/UX</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://myhomekitchen.github.io/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                                    <a href="https://github.com/myhomekitchen/myhomekitchen.github.io" target="_blank" rel="noopener noreferrer" class="project-link source"><i class="fab fa-github"></i> Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Community Contributions & Problem Solving -->
+                <div class="card" id="community-solutions" style="padding: 2rem; scroll-margin-top: 90px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px;">
+                        <h3 style="margin: 0;"><i class="fas fa-users" style="color: var(--accent); margin-right: 0.5rem;"></i>3. Community Contributions &amp; Solutions</h3>
+                        <span class="badge-tag">Knowledge Sharing</span>
+                    </div>
+                    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                        <!-- Databricks Community -->
+                        <div style="background: rgba(var(--secondary-rgb), 0.05); border: 1px solid rgba(var(--secondary-rgb), 0.25); padding: 1.5rem; border-radius: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+                                <i class="fas fa-cubes" style="color: var(--secondary); font-size: 1.4rem;"></i>
+                                <h4 style="margin: 0; color: var(--secondary); font-family: var(--font-heading);">Databricks Community</h4>
+                            </div>
+                            <p style="font-size: 0.92rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.5;">Authored architectural solutions for Delta Lake optimization, Spark memory spill reduction, partition pruning, and cluster cost reduction (improved query execution by ~40%).</p>
+                            <a href="https://community.databricks.com/t5/user/viewprofilepage/user-id/119159" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Databricks Profile
+                            </a>
+                        </div>
+
+                        <!-- HackerRank -->
+                        <div style="background: rgba(var(--primary-rgb), 0.05); border: 1px solid rgba(var(--primary-rgb), 0.25); padding: 1.5rem; border-radius: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+                                <i class="fab fa-hackerrank" style="color: var(--primary); font-size: 1.4rem;"></i>
+                                <h4 style="margin: 0; color: var(--primary); font-family: var(--font-heading);">HackerRank SQL &amp; Algorithms</h4>
+                            </div>
+                            <p style="font-size: 0.92rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.5;">Top percentile verified solutions for complex recursive CTEs, window analytics, distributed data algorithms, and query performance tuning challenges.</p>
+                            <a href="https://www.hackerrank.com/profile/rvakr" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> HackerRank Profile
+                            </a>
+                        </div>
+
+                        <!-- GitHub Discussions & Open Source -->
+                        <div style="background: rgba(0, 255, 157, 0.05); border: 1px solid rgba(0, 255, 157, 0.25); padding: 1.5rem; border-radius: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+                                <i class="fab fa-github" style="color: var(--success); font-size: 1.4rem;"></i>
+                                <h4 style="margin: 0; color: var(--success); font-family: var(--font-heading);">Open Source Ecosystem</h4>
+                            </div>
+                            <p style="font-size: 0.92rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.5;">Active maintainer of pyconnector on PyPI and creator of ChoiceBase. Open for technical discussions, issue resolution, and system architecture advisory.</p>
+                            <a href="https://github.com/RVAKR" target="_blank" rel="noopener noreferrer" class="project-link source">
+                                <i class="fab fa-github"></i> GitHub @RVAKR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo small">&lt;RVAKR<span class="slash">/</span>&gt;</div>
+                <p>Senior Data Platform Engineer · AWS Certified · AI &amp; Microservices Developer</p>
+            </div>
+            <div class="footer-social" id="footerSocial"></div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> RVAKR (Reddy Veera Akhil Kumar Reddy). All rights reserved.</p>
+                <p class="dim">Built with ☕ and ☁️</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

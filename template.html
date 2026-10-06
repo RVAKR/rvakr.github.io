@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}} - RVAKR Portfolio</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    <meta name="author" content="RVAKR">
+    <link rel="icon" type="image/png" href="images/rvakr.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Data + AI themed background canvas -->
+    <div class="bg-layer">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg-grid-overlay"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">&lt;RVAKR<span class="slash">/</span>&gt;</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="pages/about.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="pages/skills.html" class="nav-link" data-page="skills">Skills</a></li>
+                    <li><a href="pages/projects.html" class="nav-link" data-page="projects">Builds</a></li>
+                    <li><a href="pages/certifications.html" class="nav-link" data-page="certifications">Badges</a></li>
+                    <li><a href="pages/contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Content will be injected here -->
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo small">&lt;RVAKR<span class="slash">/</span>&gt;</div>
+                <p>Data Consultant · AWS Certified Data Engineer · AI &amp; Web App Developer</p>
+            </div>
+            <div class="footer-social" id="footerSocial"></div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> RVAKR (Reddy Veera Akhil Kumar Reddy). All rights reserved.</p>
+                <p class="dim">Built with ☕ and ☁️</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

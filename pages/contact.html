@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &amp; Connect - RVAKR Data Consultant</title>
+    <meta name="description" content="Get in touch with RVAKR for data consultancy, full-time roles, freelance projects, instant chat, and social channels.">
+    <meta name="author" content="RVAKR">
+    <link rel="icon" type="image/png" href="../images/rvakr.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Data + AI themed background canvas -->
+    <div class="bg-layer">
+        <canvas id="bg-canvas"></canvas>
+        <div class="bg-grid-overlay"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">&lt;RVAKR<span class="slash">/</span>&gt;</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="projects.html" class="nav-link">Builds</a></li>
+                    <li><a href="certifications.html" class="nav-link">Badges</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="control-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="control-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-tag">// DIRECT_COMMUNICATION_HUB</span>
+                    <h2>Let's Connect &amp; Collaborate</h2>
+                    <p class="section-desc">
+                        Whether you are hiring for full-time engineering roles, exploring freelance consulting, or looking to connect on developer networks, I'm ready to talk.
+                    </p>
+                </div>
+
+                <!-- Engagement Scope Fast Selectors -->
+                <div class="card" style="margin-bottom: 2.5rem; padding: 24px;">
+                    <h3 style="margin-bottom: 12px;"><i class="fas fa-bullseye" style="color: var(--primary); margin-right: 8px;"></i>Choose Your Inquiry Type</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 18px; font-size: 0.95rem;">Select an intent below to launch an email with pre-configured project scopes:</p>
+                    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+                        <a href="mailto:brvakhilkumarreddy@gmail.com?subject=%5BJob%20Opportunity%5D%20Senior%20Data%20Platform%20Engineer%20Role&body=Hi%20Akhil%2C%0A%0AWe%20are%20interested%20in%20discussing%20a%20role%20with%20our%20team.%0A%0ACompany%3A%20%0ARole%3A%20%0ALocation%2FRemote%3A%20" class="btn btn-outline" style="justify-content:center; text-align:center;">
+                            <i class="fas fa-briefcase" style="color:var(--primary);"></i> Full-Time Opportunity
+                        </a>
+                        <a href="mailto:brvakhilkumarreddy@gmail.com?subject=%5BFreelance%2FConsultancy%5D%20Project%20Inquiry&body=Hi%20Akhil%2C%0A%0AWe%20have%20a%20data%2FAI%20project%20we%20would%20like%20your%20consultancy%20on.%0A%0AProject%20Scope%3A%20%0ATimeline%3A%20%0ABudget%20Range%3A%20" class="btn btn-outline" style="justify-content:center; text-align:center;">
+                            <i class="fas fa-rocket" style="color:var(--secondary);"></i> Freelance / Consulting
+                        </a>
+                        <a href="mailto:brvakhilkumarreddy@gmail.com?subject=%5BAdvisory%2FDiscussion%5D%20Tech%20Collaboration&body=Hi%20Akhil%2C%0A%0AI%20would%20love%20to%20connect%20and%20chat%20about%3A%20" class="btn btn-outline" style="justify-content:center; text-align:center;">
+                            <i class="fas fa-comments" style="color:var(--accent);"></i> Technical Advisory
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fast Direct Channels -->
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+                    <!-- Email Direct Card -->
+                    <div class="card contact-card">
+                        <h3><i class="fas fa-envelope-open-text" style="color: var(--primary); margin-right: 0.5rem;"></i>Direct Email Box</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Direct priority inbox for hiring managers, founders, and project leads.</p>
+                        <div class="email-box" style="display:flex; align-items:center; justify-content:space-between; background:rgba(var(--primary-rgb),0.07); border:1px solid var(--card-border); padding:0.85rem 1.2rem; border-radius:8px; margin-bottom:1.5rem;">
+                            <span class="email-text" style="font-family:var(--font-mono); font-weight:600; color:var(--primary); word-break:break-all;">brvakhilkumarreddy@gmail.com</span>
+                            <button class="btn btn-outline" id="copyEmailBtn" style="padding:0.4rem 0.85rem; font-size:0.85rem; margin-left:8px; white-space:nowrap;">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                        <div style="display: flex; gap: 10px; flex-direction: column;">
+                            <a href="mailto:brvakhilkumarreddy@gmail.com?subject=Project%20Inquiry%20from%20Portfolio" class="btn btn-primary" style="width:100%; text-align:center; justify-content:center;">
+                                <i class="fas fa-paper-plane"></i> Send Direct Email
+                            </a>
+                            <a href="tel:+917995921050" class="btn btn-outline" style="width:100%; text-align:center; justify-content:center;">
+                                <i class="fas fa-phone"></i> Call: +91 7995921050
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Instant Chat & Fast Reach -->
+                    <div class="card contact-card">
+                        <h3><i class="fas fa-comment-dots" style="color: var(--success); margin-right: 0.5rem;"></i>Instant Reach &amp; Chat</h3>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Quick channels for real-time questions, networking, and rapid responses.</p>
+                        <div style="display:flex; flex-direction:column; gap:12px;">
+                            <a href="https://www.linkedin.com/in/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content:flex-start; width:100%;">
+                                <i class="fab fa-linkedin-in" style="color:#0a66c2; font-size:1.2rem;"></i> LinkedIn Direct InMail
+                            </a>
+                            <a href="https://x.com/rvakr_br" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content:flex-start; width:100%;">
+                                <i class="fab fa-x-twitter" style="font-size:1.2rem;"></i> X (Twitter) DM (@rvakr_br)
+                            </a>
+                            <a href="https://github.com/RVAKR" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="justify-content:flex-start; width:100%;">
+                                <i class="fab fa-github" style="font-size:1.2rem;"></i> GitHub Discussions (@RVAKR)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verified Profiles & Community Networks -->
+                <div class="card" style="margin-bottom: 2.5rem; padding: 28px;">
+                    <div class="section-head" style="margin-bottom: 20px;">
+                        <span class="section-tag">// MULTI_PLATFORM_DIRECTORY</span>
+                        <h2>Follow &amp; Verify Across Networks</h2>
+                        <p class="section-desc">Connect and follow across development hubs, repositories, and video tutorials.</p>
+                    </div>
+
+                    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+                        <!-- Professional -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="profile-meta"><h4>LinkedIn</h4><span class="handle">in/rvakr</span></div>
+                            </div>
+                            <p class="profile-desc">Professional network, recommendations, and engineering career updates.</p>
+                            <a href="https://www.linkedin.com/in/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-linkedin-in"></i> Connect</a>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon github"><i class="fab fa-github"></i></div>
+                                <div class="profile-meta"><h4>GitHub</h4><span class="handle">@rvakr</span></div>
+                            </div>
+                            <p class="profile-desc">Open source repos, Spark ETL pipelines, Python scripts, and packages.</p>
+                            <a href="https://github.com/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-github"></i> Follow</a>
+                        </div>
+
+                        <!-- Credly -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon credly"><i class="fas fa-certificate"></i></div>
+                                <div class="profile-meta"><h4>Credly</h4><span class="handle">credly.com/users/rvakr</span></div>
+                            </div>
+                            <p class="profile-desc">Verified certification badges including AWS Certified Data Engineer.</p>
+                            <a href="https://www.credly.com/users/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fas fa-award"></i> Verify</a>
+                        </div>
+
+                        <!-- Databricks -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon databricks"><i class="fas fa-cubes"></i></div>
+                                <div class="profile-meta"><h4>Databricks Community</h4><span class="handle">ID: 119159</span></div>
+                            </div>
+                            <p class="profile-desc">Apache Spark &amp; Delta Lake performance and cluster tuning.</p>
+                            <a href="https://community.databricks.com/t5/user/viewprofilepage/user-id/119159" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fas fa-database"></i> View</a>
+                        </div>
+
+                        <!-- HackerRank -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon hackerrank"><i class="fas fa-code"></i></div>
+                                <div class="profile-meta"><h4>HackerRank</h4><span class="handle">rvakr</span></div>
+                            </div>
+                            <p class="profile-desc">Advanced SQL problem solving, algorithmic challenges, and badges.</p>
+                            <a href="https://www.hackerrank.com/profile/rvakr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fas fa-code"></i> Profile</a>
+                        </div>
+
+                        <!-- YouTube CodeXLabs -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon youtube"><i class="fab fa-youtube"></i></div>
+                                <div class="profile-meta"><h4>CodeXLabs</h4><span class="handle">@codexlabs</span></div>
+                            </div>
+                            <p class="profile-desc">Deep-dive video walkthroughs on data pipelines, cloud, and AI.</p>
+                            <a href="https://www.youtube.com/@codexlabs" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-youtube"></i> Subscribe</a>
+                        </div>
+
+                        <!-- YouTube CodeWithBR -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon youtube"><i class="fab fa-youtube"></i></div>
+                                <div class="profile-meta"><h4>CodeWithBR</h4><span class="handle">@codewithbr</span></div>
+                            </div>
+                            <p class="profile-desc">Coding sessions, quick developer tricks, and Python engineering.</p>
+                            <a href="https://www.youtube.com/@codewithbr" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-youtube"></i> Subscribe</a>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon instagram"><i class="fab fa-instagram"></i></div>
+                                <div class="profile-meta"><h4>Instagram</h4><span class="handle">@rvakr.br</span></div>
+                            </div>
+                            <p class="profile-desc">Behind-the-scenes engineering journey and tech life updates.</p>
+                            <a href="https://www.instagram.com/rvakr.br/" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-instagram"></i> Follow</a>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="card profile-link-card">
+                            <div class="profile-card-header">
+                                <div class="profile-icon facebook"><i class="fab fa-facebook"></i></div>
+                                <div class="profile-meta"><h4>Facebook</h4><span class="handle">Reddy Veera Akhil</span></div>
+                            </div>
+                            <p class="profile-desc">Personal network, community outreach, and social connections.</p>
+                            <a href="https://www.facebook.com/ReddyVeeraAkhilKumarReddy/" target="_blank" rel="noopener noreferrer" class="btn btn-outline profile-action-btn"><i class="fab fa-facebook"></i> Connect</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo small">&lt;RVAKR<span class="slash">/</span>&gt;</div>
+                <p>Data Consultant · AWS Certified Data Engineer · AI &amp; Web App Developer</p>
+            </div>
+            <div class="footer-social" id="footerSocial"></div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> RVAKR (Reddy Veera Akhil Kumar Reddy). All rights reserved.</p>
+                <p class="dim">Built with ☕ and ☁️</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script type="module" src="../js/main.js"></script>
+    <script>
+        document.getElementById('copyEmailBtn').addEventListener('click', () => {
+            const email = 'contactmail.br@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.createElement('div');
+                toast.style.cssText = 'position:fixed; bottom:30px; left:50%; transform:translateX(-50%); background:var(--primary); color:var(--bg); padding:10px 24px; border-radius:8px; font-family:var(--font-mono); font-size:0.9rem; font-weight:600; z-index:9999; box-shadow:0 8px 24px rgba(0,0,0,0.4); animation:fadeIn 0.3s ease;';
+                toast.innerHTML = '<i class="fas fa-check-circle"></i> Email copied to clipboard!';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2200);
+            });
+        });
+    </script>
+</body>
+</html>
