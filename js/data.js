@@ -350,7 +350,7 @@ export const SOCIALS_DATA = [
   { 
     platform: "X / Twitter", 
     category: "social", 
-    url: "https://x.com/rvakr_br", 
+    url: "https://x.com/rvakr_b", 
     icon: "fab fa-x-twitter", 
     cls: "x-twitter", 
     handle: "@rvakr_br",
