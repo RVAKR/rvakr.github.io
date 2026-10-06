@@ -61,7 +61,10 @@
 
                 <!-- In-Page Category Filter Buttons (Top of Page) -->
                 <div style="display: flex; gap: 12px; margin-bottom: 2rem; flex-wrap: wrap;">
-                    <a href="#licensed-badges" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 18px;">
+                    <a href="#client-awards" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 18px;">
+                        <i class="fas fa-trophy"></i> Client Honors &amp; Recognitions
+                    </a>
+                    <a href="#licensed-badges" class="btn btn-outline" style="font-size: 0.9rem; padding: 8px 18px;">
                         <i class="fas fa-award"></i> Licensed Badges &amp; Credentials
                     </a>
                     <a href="#specializations" class="btn btn-outline" style="font-size: 0.9rem; padding: 8px 18px;">
@@ -69,7 +72,48 @@
                     </a>
                 </div>
 
-                <!-- 1. Licensed & Verified Industry Credentials -->
+                <!-- 1. Recognitions & Client Awards -->
+                <div class="card cert-category" id="client-awards" style="margin-bottom: 2.5rem; scroll-margin-top: 90px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px;">
+                        <h3 style="margin: 0;"><i class="fas fa-trophy" style="color: var(--primary); margin-right: 0.5rem;"></i>Recognitions &amp; Client Awards</h3>
+                        <span class="badge-tag">Demonstrated Excellence</span>
+                    </div>
+                    <div class="cert-grid">
+                        <!-- Lone Wolf -->
+                        <div class="cert-card featured">
+                            <div class="cert-header">
+                                <div style="display:flex; align-items:center; justify-content:center; width:70px; height:70px; border-radius:12px; background:rgba(0,210,255,0.15); border:2px solid var(--primary);">
+                                    <i class="fas fa-award" style="font-size:2.2rem; color:var(--primary);"></i>
+                                </div>
+                            </div>
+                            <div class="cert-content">
+                                <h4>“Lone Wolf” Title</h4>
+                                <p class="cert-issuer">Conferred by Client Leadership</p>
+                                <p class="cert-dates"><i class="fas fa-star" style="color: var(--primary);"></i> Client Honors · Platform Architecture</p>
+                                <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.45;">Title conferred directly by client leadership for single-handedly designing, building, and delivering a complete enterprise data platform in record time.</p>
+                                <span class="badge-tag" style="background: rgba(var(--primary-rgb), 0.12); color: var(--primary);">Single-Handed Platform Rollout</span>
+                            </div>
+                        </div>
+
+                        <!-- On the Spot -->
+                        <div class="cert-card featured">
+                            <div class="cert-header">
+                                <div style="display:flex; align-items:center; justify-content:center; width:70px; height:70px; border-radius:12px; background:rgba(168,85,247,0.15); border:2px solid var(--secondary);">
+                                    <i class="fas fa-trophy" style="font-size:2.2rem; color:var(--secondary);"></i>
+                                </div>
+                            </div>
+                            <div class="cert-content">
+                                <h4>“On the Spot” Recognition</h4>
+                                <p class="cert-issuer" style="color: var(--secondary);">From Senior Management</p>
+                                <p class="cert-dates"><i class="fas fa-bolt" style="color: var(--secondary);"></i> Critical Pipeline Resolution</p>
+                                <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.45;">Awarded by senior management for excellence in critical pipeline turnaround and delivering automated multi-region AWS Glue ingestion across US, UK, and Japan.</p>
+                                <span class="badge-tag" style="background: rgba(var(--secondary-rgb), 0.12); color: var(--secondary);">Multi-Region AWS Ingestion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Licensed & Verified Industry Credentials -->
                 <div class="card cert-category" id="licensed-badges" style="margin-bottom: 2.5rem; scroll-margin-top: 90px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 8px;">
                         <h3 style="margin: 0;"><i class="fas fa-award" style="color: var(--primary); margin-right: 0.5rem;"></i>Licensed Industry Badges &amp; Certifications</h3>

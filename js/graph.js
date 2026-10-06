@@ -16,22 +16,22 @@ import { SKILLS_DATA as skillsData } from './data.js';
 
   // Defined Constellation Layout positions (normalized for 980x490 viewBox)
   const nodePositions = {
-    'aws': { x: 200, y: 95, color: '#00f3ff', glow: 'rgba(0,243,255,0.45)', monogram: 'AWS' },
-    'databricks': { x: 490, y: 65, color: '#bc13fe', glow: 'rgba(188,19,254,0.45)', monogram: 'DTB' },
-    'gcp-azure': { x: 780, y: 95, color: '#00f3ff', glow: 'rgba(0,243,255,0.45)', monogram: 'CLD' },
-    'ingestion': { x: 120, y: 230, color: '#00ff9d', glow: 'rgba(0,255,157,0.45)', monogram: 'ING' },
-    'spark': { x: 320, y: 180, color: '#00ff9d', glow: 'rgba(0,255,157,0.45)', monogram: 'SPK' },
-    'python': { x: 660, y: 180, color: '#ff0055', glow: 'rgba(255,0,85,0.45)', monogram: 'PY' },
-    'ai-rag': { x: 860, y: 230, color: '#bc13fe', glow: 'rgba(188,19,254,0.45)', monogram: 'AI' },
-    'governance': { x: 490, y: 235, color: '#00f3ff', glow: 'rgba(0,243,255,0.45)', monogram: 'GOV' },
-    'sql': { x: 190, y: 370, color: '#00f3ff', glow: 'rgba(0,243,255,0.45)', monogram: 'SQL' },
-    'airflow': { x: 360, y: 395, color: '#00ff9d', glow: 'rgba(0,255,157,0.45)', monogram: 'AIR' },
-    'fastapi': { x: 620, y: 395, color: '#bc13fe', glow: 'rgba(188,19,254,0.45)', monogram: 'API' },
-    'devops': { x: 790, y: 370, color: '#ff0055', glow: 'rgba(255,0,85,0.45)', monogram: 'OPS' }
+    'aws': { x: 200, y: 95, color: '#00d2ff', glow: 'rgba(0,210,255,0.25)', monogram: 'AWS' },
+    'databricks': { x: 490, y: 65, color: '#a855f7', glow: 'rgba(168,85,247,0.25)', monogram: 'DTB' },
+    'gcp-azure': { x: 780, y: 95, color: '#00d2ff', glow: 'rgba(0,210,255,0.25)', monogram: 'CLD' },
+    'ingestion': { x: 120, y: 230, color: '#10b981', glow: 'rgba(16,185,129,0.25)', monogram: 'ING' },
+    'spark': { x: 320, y: 180, color: '#10b981', glow: 'rgba(16,185,129,0.25)', monogram: 'SPK' },
+    'python': { x: 660, y: 180, color: '#f43f5e', glow: 'rgba(244,63,94,0.25)', monogram: 'PY' },
+    'ai-rag': { x: 860, y: 230, color: '#a855f7', glow: 'rgba(168,85,247,0.25)', monogram: 'AI' },
+    'governance': { x: 490, y: 235, color: '#00d2ff', glow: 'rgba(0,210,255,0.25)', monogram: 'GOV' },
+    'sql': { x: 190, y: 370, color: '#00d2ff', glow: 'rgba(0,210,255,0.25)', monogram: 'SQL' },
+    'airflow': { x: 360, y: 395, color: '#10b981', glow: 'rgba(16,185,129,0.25)', monogram: 'AIR' },
+    'fastapi': { x: 620, y: 395, color: '#a855f7', glow: 'rgba(168,85,247,0.25)', monogram: 'API' },
+    'devops': { x: 790, y: 370, color: '#f43f5e', glow: 'rgba(244,63,94,0.25)', monogram: 'OPS' }
   };
 
   const nodes = skillsData.map((s) => {
-    const pos = nodePositions[s.id] || { x: 490, y: 245, color: '#00f3ff', glow: 'rgba(0,243,255,0.4)', monogram: s.name.substring(0, 3).toUpperCase() };
+    const pos = nodePositions[s.id] || { x: 490, y: 245, color: '#00d2ff', glow: 'rgba(0,210,255,0.25)', monogram: s.name.substring(0, 3).toUpperCase() };
     return {
       ...s,
       x: pos.x,
@@ -77,7 +77,7 @@ import { SKILLS_DATA as skillsData } from './data.js';
   filter.setAttribute('width', '200%');
   filter.setAttribute('height', '200%');
   filter.innerHTML = `
-    <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+    <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
     <feMerge>
       <feMergeNode in="coloredBlur"/>
       <feMergeNode in="SourceGraphic"/>
@@ -93,8 +93,8 @@ import { SKILLS_DATA as skillsData } from './data.js';
   edgeGrad.setAttribute('x2', '100%');
   edgeGrad.setAttribute('y2', '100%');
   edgeGrad.innerHTML = `
-    <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.6"/>
-    <stop offset="100%" stop-color="#bc13fe" stop-opacity="0.6"/>
+    <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#a855f7" stop-opacity="0.6"/>
   `;
   defs.appendChild(edgeGrad);
 
@@ -121,7 +121,7 @@ import { SKILLS_DATA as skillsData } from './data.js';
     line.setAttribute('y1', na.y);
     line.setAttribute('x2', nb.x);
     line.setAttribute('y2', nb.y);
-    line.setAttribute('stroke', 'rgba(0, 243, 255, 0.22)');
+    line.setAttribute('stroke', 'rgba(0, 210, 255, 0.2)');
     line.setAttribute('stroke-width', '1.6');
     line.setAttribute('stroke-dasharray', '4 3');
     line.setAttribute('class', 'graph-edge-line');
