@@ -5,7 +5,7 @@
 [![AWS Certified](https://img.shields.io/badge/AWS_Certified-Data_Engineer_Associate-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://www.credly.com/users/reddyveeraakhilkumarreddy.boreddy)
 [![PyPI Package](https://img.shields.io/badge/PyPI-pyconnector-3775A9?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/pyconnector/)
 
-> **High-scale Data Platform Engineering Portfolio** featuring interactive SVG constellation knowledge graphs, dual-mode cyber design system, live platform telemetry, and verified production architectures.
+> **High-scale Data Platform Engineering Portfolio** featuring interactive SVG constellation knowledge graphs, dual-mode cyber design system, Google Analytics (GA4) integration, and verified production architectures.
 
 ---
 
@@ -25,17 +25,17 @@
 rvakr.github.io/
 ├── index.html                   # Home: Hero, typing animation, stats strip, client recognitions, pillars
 ├── pages/
-│   ├── about.html               # Professional summary, 4 pillars, career chronology, live telemetry, education
+│   ├── about.html               # Professional summary, 4 pillars, career chronology, education
 │   ├── skills.html              # Interactive SVG Knowledge Graph, category filters, skill meters
 │   ├── projects.html            # Case studies (100+ TB Lakehouse, ~95% Less Code engine, ChoiceBase, PyPI)
 │   ├── certifications.html      # Client honors, licensed badges (AWS, Databricks), technical specializations
-│   └── contact.html             # Inquiry type selector, priority inbox, instant chat, social directory, telemetry
+│   └── contact.html             # Inquiry type selector, priority inbox, instant chat, social directory
 ├── css/
 │   └── style.css                # Universal CSS design system (Dark & High-Contrast Light theme, responsive)
 ├── js/
 │   ├── data.js                  # Centralized data model (Profile, Skills, Projects, Experience, Socials)
 │   ├── graph.js                 # Interactive SVG Constellation Knowledge Graph engine
-│   └── main.js                  # Theme toggler, mobile drawer, typing animation, live visitor telemetry
+│   └── main.js                  # Theme toggler, mobile drawer, typing animation
 ├── data/                        # JSON mirrors for API/headless consumption (profile, skills, projects, certs)
 ├── images/                      # Optimized image assets, logos, and verified certificate PDFs
 ├── .nojekyll                    # Bypasses Jekyll on GitHub Pages for instant static file serving
@@ -49,17 +49,12 @@ rvakr.github.io/
 ### 1. Interactive SVG Constellation Knowledge Graph (`js/graph.js`)
 - 12-node interconnected constellation mapping distributed architectures (`AWS`, `DTB`, `SPK`, `PY`, `SQL`, `API`, `CLD`, `AIR`, `OPS`, `AI`, `ING`, `GOV`).
 - Dynamic hover/touch highlighting with illuminated halos and active topological edge connections.
-- Floating cyber telemetry tooltip rendering proficiency ratings, category badges, and domain descriptions.
+- Floating cyber tooltip rendering proficiency ratings, category badges, and domain descriptions.
 
 ### 2. Dual-Mode Cyber Design System (`css/style.css`)
 - **Dark Mode**: OLED-optimized slate obsidian (`#090b14`) with balanced luminescence (`#00d2ff` cyan, `#a855f7` violet, `#f43f5e` coral) engineered to prevent eye glare.
 - **Light Mode**: High-contrast Slate-900 typography (`#0f172a`) on clean white cards with AAA-accessible sky blue accents (`#0284c7`).
 - **Mobile First**: 64px mobile header, slide-out drawer navigation, 2x2 mobile stats strip, horizontal momentum scrolling filter bars, and touch targets $\ge 44\text{px}$.
-
-### 3. Live Site Visitor Telemetry Engine (`js/main.js`)
-- Real-time visitor counter powered by `counterapi.dev` with session counting and local storage cache fallbacks.
-- Smooth ease-out animated number count-up on page load.
-- Integrated across both **About** and **Contact** pages with live pulsing status indicators.
 
 ---
 

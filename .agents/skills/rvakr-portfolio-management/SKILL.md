@@ -16,15 +16,15 @@ The portfolio is structured as a zero-build, ultra-fast **Vanilla ES6 Module** m
 | Path | Purpose | Key Components |
 | :--- | :--- | :--- |
 | `index.html` | Homepage | Hero, typing animation, stats strip, recognitions callout, 4 core pillars, builds highlight |
-| `pages/about.html` | About & Profile | Summary, 4 architecture pillars, career chronology (Softcrylic, Bolt Tech, TCS, Trio Vision), live telemetry, education |
+| `pages/about.html` | About & Profile | Summary, 4 architecture pillars, career chronology (Softcrylic, Bolt Tech, TCS, Trio Vision), education |
 | `pages/skills.html` | Technical Skills | Interactive SVG Knowledge Graph (12-node constellation), domain categories, proficiency meters |
 | `pages/projects.html` | Builds & Solutions | 100+ TB Medallion Lakehouse case study, ~95% Less Code framework, ChoiceBase, PyConnector |
 | `pages/certifications.html` | Badges & Honors | Recognitions & Client Awards (“Lone Wolf”, “On the Spot”), licensed badges (AWS, Databricks, PyPI), specializations |
-| `pages/contact.html` | Contact Hub | Inquiry fast-select, direct priority inbox, instant DM channels, live telemetry visitor counter, social directory |
+| `pages/contact.html` | Contact Hub | Inquiry fast-select, direct priority inbox, instant DM channels, social directory |
 | `css/style.css` | Universal Design System | Custom properties (`--bg`, `--primary`), Dark/Light mode overrides, mobile responsive breakpoints |
 | `js/data.js` | Single Source of Truth | Master data objects (`PROFILE`, `EXPERIENCE_DATA`, `SKILLS_DATA`, `PROJECTS_DATA`, `RECOGNITIONS_DATA`, `SOCIALS_DATA`) |
 | `js/graph.js` | Constellation Graph Engine | SVG rendering, dynamic halo pulses, edge topological connectors, floating cyber tooltips |
-| `js/main.js` | App Controller | Theme toggle, mobile drawer navigation, live visitor counter engine (`initVisitorCounter`) |
+| `js/main.js` | App Controller | Theme toggle, mobile drawer navigation, typing animation |
 | `.nojekyll` | GitHub Pages Directive | Bypasses Jekyll build processing to serve raw static assets directly with accurate MIME types |
 | `CNAME` | Custom Domain | Configured to `rvakr.boreddy.com` |
 
@@ -66,13 +66,13 @@ When updating copy, achievements, or resumes, always enforce these grounded metr
 
 ---
 
-## 4. Live Visitor Counter Protocol
+## 4. Web Analytics Integration (GA4)
 
-The visitor counter is managed in `js/main.js` via `initVisitorCounter()`:
-- Queries `https://api.counterapi.dev/v1/rvakr-portfolio-v1/visits` with an AbortController 2.5s timeout.
-- Increments on first session visit (`/visits/up`) and stores in `localStorage` (`rvakr_visitor_cache`).
-- Smoothly animates count-up on load (e.g. `8,420+ Live`).
-- Displayed with `<span class="visitor-count-val">` in `pages/about.html` and `pages/contact.html`.
+The site integrates Google Analytics 4 (`gtag.js`) across all HTML `<head>` blocks with no UI performance overhead or third-party counter dependencies.
+
+---
+
+## 5. Deployment & Verification Workflow
 
 ---
 
