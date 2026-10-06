@@ -5,7 +5,6 @@ export const PROFILE = {
   tagline: "Senior Data Platform Engineer | 100+ TB Scale · 5M+ Tables · Multi-Cluster Lakehouses",
   bio: "Senior Data Platform Engineer with 6+ years of experience specialized in handling 100+ TB data systems with over 5 million tables (built to scale to 10M). Proven track record of templating ~70% of scripts via metadata-driven automation (~95% code reduction), managing high-throughput multi-cluster distributed architectures (AWS, Databricks, Azure, GCP), real-time calculation microservices (FastAPI/Lambda), and enterprise AI-ready pipelines. Recognized by client leadership as 'Lone Wolf' for rapid platform delivery.",
   location: "Andhra Pradesh, India (Global / Remote)",
-  phone: "+91 7995921050",
   email: "brvakhilkumarreddy@gmail.com",
   secondaryEmail: "contactmail.br@gmail.com",
   status: "Available for Senior / Lead Roles, Freelance & Platform Advisory",
