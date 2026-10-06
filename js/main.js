@@ -13,7 +13,9 @@ document.documentElement.setAttribute('data-theme', theme);
 
 function updateThemeIcon() {
   const themeBtns = document.querySelectorAll('#themeToggle, .theme-toggle-btn');
+  if (!themeBtns || themeBtns.length === 0) return;
   themeBtns.forEach(btn => {
+    if (!btn) return;
     btn.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     btn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
     btn.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
