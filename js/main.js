@@ -230,59 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeLoop();
   }
-
-  // Live Visitor Counter & Site Telemetry Engine
-  initVisitorCounter();
 });
-
-function initVisitorCounter() {
-  const visitorCountEls = document.querySelectorAll('.visitor-count-val, #visitorCount, .live-visitor-num');
-  if (visitorCountEls.length === 0) return;
-
-  const STORAGE_KEY = 'rvakr_visitor_impressions';
-  const EPOCH_START = new Date('2024-06-01T00:00:00Z').getTime();
-  const MS_PER_DAY = 1000 * 60 * 60 * 24;
-  
-  // Calculate verified historical baseline + organic daily traffic since launch
-  const daysElapsed = Math.max(0, (Date.now() - EPOCH_START) / MS_PER_DAY);
-  const baselineCount = 7200 + Math.floor(daysElapsed * 5.2);
-
-  let userIncrements = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
-  if (isNaN(userIncrements) || userIncrements < 0) userIncrements = 0;
-
-  // Increment on new session
-  if (!sessionStorage.getItem('rvakr_session_logged')) {
-    userIncrements += 1;
-    sessionStorage.setItem('rvakr_session_logged', 'true');
-    localStorage.setItem(STORAGE_KEY, userIncrements.toString());
-  }
-
-  const finalCount = baselineCount + userIncrements;
-
-  // Animate counter across all telemetry cards
-  visitorCountEls.forEach(el => {
-    animateCountUp(el, finalCount);
-  });
-}
-
-function animateCountUp(element, target) {
-  let start = Math.max(0, target - 50);
-  const duration = 1200;
-  const startTime = performance.now();
-
-  function update(time) {
-    const elapsed = time - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const easeProgress = 1 - (1 - progress) * (1 - progress);
-    const current = Math.floor(start + (target - start) * easeProgress);
-    element.textContent = current.toLocaleString() + '+';
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      element.textContent = target.toLocaleString() + '+';
-    }
-  }
-  requestAnimationFrame(update);
-}
 
 export { profile, skillsData, projectsData, contributionsData, certificationsData, socialsData };
