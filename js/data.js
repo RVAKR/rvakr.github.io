@@ -288,7 +288,7 @@ export const SOCIALS_DATA = [
     cls: "credly", 
     handle: "reddyveeraakhilkumarreddy",
     badge: "Verified Badges",
-    action: "Verify Badges", 
+    action: "Badges", 
     description: "Official AWS Certified Data Engineer & Databricks verified credentials." 
   },
   { 
