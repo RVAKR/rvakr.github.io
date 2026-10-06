@@ -1,0 +1,62 @@
+{
+    "highlights": [
+        "AWS Certified Data Engineer - Associate",
+        "Databricks Lakehouse & Delta Sharing Architect",
+        "100+ TB & 5M+ Tables Platform Scalability",
+        "70% Script Templating (~95% Less Code)",
+        "Global Ingestion (600+ Tables across US, UK, JP)",
+        "FastAPI & Low-Latency Microservices",
+        "Enterprise RAG & AI-Ready Systems"
+    ],
+    "categories": [
+        {
+            "id": "data-engineering",
+            "name": "1. Data Engineering & Distributed Systems",
+            "icon": "fas fa-database",
+            "description": "Medallion Lakehouses, distributed Spark/Scala processing, real-time streaming, and high-scale ETL/ELT pipelines.",
+            "skills": [
+                { "name": "ETL / ELT Pipelines", "level": "Expert (10/10)", "icon": "fas fa-stream", "featured": true, "desc": "Batch & real-time pipelines, automated deduplication and unification from bronze to silver/gold." },
+                { "name": "Apache Spark & Scala", "level": "Expert (9/10)", "icon": "fas fa-bolt", "featured": true, "desc": "PySpark & Scala DataFrames, structured streaming, partition optimization, and memory tuning." },
+                { "name": "Databricks & Delta Lake", "level": "Expert (10/10)", "icon": "fas fa-cubes", "featured": true, "desc": "Unity Catalog, Delta Lake, Delta Sharing, Lakebase control app, and Auto Loader." },
+                { "name": "SQL & Data Modeling", "level": "Expert (10/10)", "icon": "fas fa-database", "featured": true, "desc": "Dimensional modeling, Snowflake, Redshift, PostgreSQL, CTEs, and window functions." },
+                { "name": "Automated Ingestion (Fivetran & Auto Loader)", "level": "Expert (10/10)", "icon": "fas fa-cloud-download-alt", "desc": "Automated cloud ingestion from 600+ source tables with schema evolution." }
+            ]
+        },
+        {
+            "id": "platform-cloud",
+            "name": "2. Multi-Cloud Platform Engineering",
+            "icon": "fas fa-server",
+            "description": "Multi-cluster infrastructure handling 100+ TB and 5M+ tables, ~70% script templating via metadata frameworks, and disaster recovery architectures.",
+            "skills": [
+                { "name": "AWS Ecosystem", "level": "Certified Expert (10/10)", "icon": "fab fa-aws", "featured": true, "desc": "S3, Glue, Redshift, Lambda, EMR, Athena, API Gateway, DynamoDB, IAM, and KMS." },
+                { "name": "Azure & GCP", "level": "Advanced (8/10)", "icon": "fas fa-cloud", "featured": true, "desc": "Azure Databricks, ADF, ADLS Gen2, Google BigQuery, Dataproc, and GCS." },
+                { "name": "Airflow & Orchestration", "level": "Expert (9/10)", "icon": "fas fa-wind", "featured": true, "desc": "Metadata-driven DAG orchestration (~95% code reduction), MWAA, and automated data quality gates." },
+                { "name": "DevOps, Docker & IaC", "level": "Expert (9/10)", "icon": "fab fa-docker", "featured": true, "desc": "Docker, Kubernetes, Terraform IaC, GitHub Actions CI/CD, and Linux administration." },
+                { "name": "Governance & Security", "level": "Expert (9/10)", "icon": "fas fa-shield-alt", "desc": "Row-level security (RLS), dynamic data masking, Unity Catalog fine-grained access, and Delta Sharing." }
+            ]
+        },
+        {
+            "id": "microservices-apis",
+            "name": "3. Microservices & API Development",
+            "icon": "fas fa-rocket",
+            "description": "High-throughput asynchronous Python microservices, real-time calculation engines, and interactive web tools.",
+            "skills": [
+                { "name": "FastAPI & Flask", "level": "Expert (10/10)", "icon": "fas fa-bolt", "featured": true, "desc": "High-concurrency async REST APIs, Pydantic validation, OpenAPI docs, and auth layers." },
+                { "name": "Python Development & PyPI Packages", "level": "Expert (10/10)", "icon": "fab fa-python", "featured": true, "desc": "Author of pyconnector package, OOP design, async I/O, and automated testing." },
+                { "name": "Real-Time Quoting Engines", "level": "Expert (9/10)", "icon": "fas fa-tachometer-alt", "desc": "Sub-second multi-vendor calculation APIs refreshed every ~30 minutes on DynamoDB & Lambda." },
+                { "name": "Web Dashboards & UIs", "level": "Advanced (8/10)", "icon": "fab fa-js-square", "desc": "Modern responsive frontends, interactive charts, Streamlit apps, and control portals." }
+            ]
+        },
+        {
+            "id": "ai-genai",
+            "name": "4. AI-Ready Systems & GenAI Engineering",
+            "icon": "fas fa-brain",
+            "description": "Architecting data infrastructure for enterprise AI, LLM orchestration, and RAG retrieval systems.",
+            "skills": [
+                { "name": "Enterprise RAG & Vector Stores", "level": "Expert (9/10)", "icon": "fas fa-layer-group", "featured": true, "desc": "Vector indexing (Pinecone, ChromaDB, pgvector), semantic search, and retrieval pipelines." },
+                { "name": "LLM & Agent Orchestration", "level": "Expert (9/10)", "icon": "fas fa-robot", "featured": true, "desc": "Integration with Claude Code, OpenAI, LangChain, and structured AI agent workflows." },
+                { "name": "AI Data Preparation & Curation", "level": "Expert (10/10)", "icon": "fas fa-cogs", "featured": true, "desc": "Automated embedding generation, feature pipelines, and curated gold AI datasets." }
+            ]
+        }
+    ]
+}
